@@ -1,3 +1,5 @@
+import 'dart:developer' as developer;
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:march_madness/core/models/bracket_game.dart';
@@ -56,7 +58,7 @@ class _BracketScreenState extends State<BracketScreen> {
             return const Center(child: CircularProgressIndicator());
           }
           if (snapshot.hasError) {
-            _showError(context, snapshot.error.toString());
+            _showError(context, snapshot.error);
             return Center(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -91,12 +93,13 @@ class _BracketScreenState extends State<BracketScreen> {
     );
   }
 
-  void _showError(BuildContext context, String message) {
+  void _showError(BuildContext context, Object? error) {
+    developer.log('Bracket load error: $error', name: 'BracketScreen');
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text(message),
+        const SnackBar(
+          content: Text('Failed to load bracket. Please try again.'),
           backgroundColor: Colors.red,
         ),
       );

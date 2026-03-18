@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:developer' as developer;
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -87,6 +88,7 @@ class _AgentChatScreenState
         _scrollToBottom();
       },
       onError: (Object error) {
+        developer.log('Chat stream error: $error', name: 'AgentChat');
         setState(() {
           _isStreaming = false;
           _streamBuffer = '';
@@ -94,9 +96,9 @@ class _AgentChatScreenState
         if (mounted) {
           ScaffoldMessenger.of(context)
               .showSnackBar(
-            SnackBar(
+            const SnackBar(
               content: Text(
-                'Error: $error',
+                'Connection error. Please try again.',
               ),
               backgroundColor: Colors.red,
             ),

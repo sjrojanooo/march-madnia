@@ -1,3 +1,5 @@
+import 'dart:developer' as developer;
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:march_madness/core/models/agent_info.dart';
@@ -60,11 +62,12 @@ class _BracketRatingScreenState
         }
       });
     } on Exception catch (e) {
+      developer.log('Failed to load agents: $e', name: 'BracketRating');
       if (mounted) {
         ScaffoldMessenger.of(context)
             .showSnackBar(
-          SnackBar(
-            content: Text('Error: $e'),
+          const SnackBar(
+            content: Text('Failed to load agents. Please try again.'),
             backgroundColor: Colors.red,
           ),
         );
@@ -106,11 +109,12 @@ class _BracketRatingScreenState
       );
       setState(() => _rating = rating);
     } on Exception catch (e) {
+      developer.log('Failed to rate bracket: $e', name: 'BracketRating');
       if (mounted) {
         ScaffoldMessenger.of(context)
             .showSnackBar(
-          SnackBar(
-            content: Text('Error: $e'),
+          const SnackBar(
+            content: Text('Failed to get rating. Please try again.'),
             backgroundColor: Colors.red,
           ),
         );

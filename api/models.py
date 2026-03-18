@@ -12,7 +12,7 @@ class AgentInfo(BaseModel):
 
 class AgentChatRequest(BaseModel):
     message: str = Field(..., min_length=1, max_length=2000)
-    conversation_history: list[dict[str, str]] = Field(default_factory=list)
+    conversation_history: list[dict[str, str]] = Field(default_factory=list, max_length=50)
 
 
 class AgentRateBracketRequest(BaseModel):
@@ -54,4 +54,15 @@ class UserBracketResponse(BaseModel):
 
 
 class ChatHistoryUpdate(BaseModel):
-    messages: list[dict[str, str]]  # [{role: "user"|"assistant", content: "..."}]
+    messages: list[dict[str, str]] = Field(..., max_length=100)  # [{role: "user"|"assistant", content: "..."}]
+
+
+class AuthRequest(BaseModel):
+    email: str = Field(..., min_length=5, max_length=254)
+    password: str = Field(..., min_length=6, max_length=128)
+
+
+class AuthResponse(BaseModel):
+    access_token: str
+    refresh_token: str
+    user_id: str

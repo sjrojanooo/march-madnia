@@ -25,6 +25,8 @@ from api.models import (
     AgentInfo,
     AgentRateBracketRequest,
     AgentRateBracketResponse,
+    AuthRequest,
+    AuthResponse,
     ChatHistoryUpdate,
     UserBracketCreate,
     UserBracketResponse,
@@ -109,6 +111,76 @@ app.add_middleware(
 
 
 # ---------------------------------------------------------------------------
+# Auth endpoints (alternative to client-side Supabase PKCE)
+# ---------------------------------------------------------------------------
+def _require_supabase(request: Request):
+    """Return Supabase client or raise 503."""
+    sb = request.app.state.supabase
+    if not sb:
+        raise HTTPException(
+            status_code=503,
+            detail={"error": "database_unavailable", "message": "Database not configured."},
+        )
+    return sb
+
+
+@app.post("/auth/signup", response_model=AuthResponse, status_code=201)
+async def signup(body: AuthRequest, request: Request) -> AuthResponse:
+    """Create a new user via Supabase Auth."""
+    sb = _require_supabase(request)
+    try:
+        result = sb.auth.sign_up({"email": body.email, "password": body.password})
+    except Exception as exc:
+        logger.warning("Signup failed: %s", exc)
+        raise HTTPException(
+            status_code=400,
+            detail={"error": "signup_failed", "message": "Could not create account. Check email/password."},
+        ) from exc
+
+    session = result.session
+    user = result.user
+    if not session or not user:
+        raise HTTPException(
+            status_code=400,
+            detail={"error": "signup_failed", "message": "Signup did not return a session. Email confirmation may be required."},
+        )
+
+    return AuthResponse(
+        access_token=session.access_token,
+        refresh_token=session.refresh_token,
+        user_id=user.id,
+    )
+
+
+@app.post("/auth/login", response_model=AuthResponse)
+async def login(body: AuthRequest, request: Request) -> AuthResponse:
+    """Authenticate a user and return tokens."""
+    sb = _require_supabase(request)
+    try:
+        result = sb.auth.sign_in_with_password({"email": body.email, "password": body.password})
+    except Exception as exc:
+        logger.warning("Login failed: %s", exc)
+        raise HTTPException(
+            status_code=401,
+            detail={"error": "login_failed", "message": "Invalid email or password."},
+        ) from exc
+
+    session = result.session
+    user = result.user
+    if not session or not user:
+        raise HTTPException(
+            status_code=401,
+            detail={"error": "login_failed", "message": "Authentication did not return a session."},
+        )
+
+    return AuthResponse(
+        access_token=session.access_token,
+        refresh_token=session.refresh_token,
+        user_id=user.id,
+    )
+
+
+# ---------------------------------------------------------------------------
 # Helper: require Anthropic client
 # ---------------------------------------------------------------------------
 def _require_anthropic(request: Request) -> Any:
@@ -180,6 +252,7 @@ async def agent_chat(
     expert_id: str,
     body: AgentChatRequest,
     request: Request,
+    user_id: str = Depends(get_current_user_id),
 ) -> StreamingResponse:
     """Stream a chat response from an expert analyst agent (SSE)."""
     _require_experts()
@@ -217,6 +290,7 @@ async def agent_rate_bracket(
     expert_id: str,
     body: AgentRateBracketRequest,
     request: Request,
+    user_id: str = Depends(get_current_user_id),
 ) -> AgentRateBracketResponse:
     """Get an expert analyst's rating and suggestions for a user bracket."""
     _require_experts()
@@ -238,7 +312,7 @@ async def agent_rate_bracket(
     except RuntimeError as exc:
         raise HTTPException(
             status_code=503,
-            detail={"error": "rate_bracket_failed", "message": str(exc)},
+            detail={"error": "rate_bracket_failed", "message": "Expert analyst service unavailable."},
         ) from exc
     except Exception as exc:
         logger.exception("Error rating bracket for expert %s", expert_id)

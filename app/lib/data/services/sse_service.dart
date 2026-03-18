@@ -7,6 +7,7 @@ class SseService {
   static Stream<String> connect({
     required Uri uri,
     required Map<String, dynamic> body,
+    String? token,
     Duration timeout = const Duration(seconds: 60),
   }) async* {
     final client = http.Client();
@@ -15,6 +16,9 @@ class SseService {
         ..headers['Content-Type'] = 'application/json'
         ..headers['Accept'] = 'text/event-stream'
         ..body = jsonEncode(body);
+      if (token != null) {
+        request.headers['Authorization'] = 'Bearer $token';
+      }
 
       final response = await client
           .send(request)
