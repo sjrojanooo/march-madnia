@@ -1,0 +1,96 @@
+[project]
+name = "march-madness"
+version = "0.1.0"
+description = "ML-powered NCAA March Madness bracket predictor"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "scikit-learn>=1.4",
+    "xgboost>=2.0",
+    "lightgbm>=4.0",
+    "polars>=1.0",
+    "httpx>=0.27",
+    "beautifulsoup4>=4.12",
+    "lxml>=5.0",
+    "selectolax>=0.3",
+    "rich>=13.0",
+    "matplotlib>=3.8",
+    "seaborn>=0.13",
+    "jupyter>=1.0",
+    "tqdm>=4.66",
+    "pyarrow>=15.0",
+    "mcp-neo4j-data-modeling>=0.8.2",
+    "playwright>=1.58.0",
+    "pydantic>=2.0",
+    "fastapi>=0.135.1",
+    "uvicorn[standard]>=0.42.0",
+    "anthropic>=0.85.0",
+    "pydantic-settings>=2.13.1",
+    "python-multipart>=0.0.22",
+    "supabase>=2.0",
+    "python-jose[cryptography]>=3.3",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=1.19.1",
+    "pyright>=1.1.408",
+    "ruff>=0.15.6",
+]
+
+# ---------------------------------------------------------------------------
+# Ruff — linter + formatter
+# ---------------------------------------------------------------------------
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+src = ["src"]
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "F",   # pyflakes
+    "I",   # isort (import sorting)
+    "UP",  # pyupgrade
+    "B",   # bugbear
+    "SIM", # simplify
+    "W",   # pycodestyle warnings
+]
+ignore = [
+    "E501",   # line too long (handled by formatter)
+    "B008",   # do not perform function call in argument defaults
+    "SIM108", # use ternary operator (readability tradeoff)
+    "SIM102", # nested if → single if (readability tradeoff)
+    "SIM113", # use enumerate (not always clearer)
+    "B007",   # unused loop variable (common in dict iteration)
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["src"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+# ---------------------------------------------------------------------------
+# Pyright — type checker
+# ---------------------------------------------------------------------------
+[tool.pyright]
+pythonVersion = "3.11"
+typeCheckingMode = "basic"
+venvPath = "."
+venv = ".venv"
+include = ["src", "scripts"]
+exclude = ["data", "notebooks", "**/__pycache__"]
+
+# ---------------------------------------------------------------------------
+# mypy — type checker (backup)
+# ---------------------------------------------------------------------------
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+warn_return_any = true
+warn_unused_configs = true
+exclude = ["data/", "notebooks/"]

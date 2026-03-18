@@ -1,0 +1,39 @@
+# Environment files (secrets)
+.env
+.env.local
+.dart_defines
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+uv.lock
+
+# Data (large files — keep predictions and models only)
+data/raw/
+data/processed/
+data/agents/
+data/models/*.joblib
+
+# Supabase local
+supabase/.temp/
+
+# Flutter
+app/.dart_tool/
+app/build/
+app/.flutter-plugins
+app/.flutter-plugins-dependencies
+app/pubspec.lock
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+
+# Logs
+*.log
+logs/

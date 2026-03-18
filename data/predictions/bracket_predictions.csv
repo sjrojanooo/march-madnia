@@ -1,0 +1,440 @@
+round,game_number,team_a,seed_a,team_b,seed_b,predicted_winner,win_probability,upset
+Round of 64,1,duke,1,siena,16,duke,0.901,False
+Round of 64,2,connecticut,2,furman,15,connecticut,0.8843,False
+Round of 64,3,michigan state,3,north dakota state,14,michigan state,0.8702,False
+Round of 64,4,kansas,4,california baptist,13,kansas,0.8506,False
+Round of 64,5,st johns ny,5,northern iowa,12,st johns ny,0.8451,False
+Round of 64,6,louisville,6,south florida,11,louisville,0.852,False
+Round of 64,7,ucla,7,ucf,10,ucla,0.654,False
+Round of 64,8,ohio state,8,texas christian,9,ohio state,0.6732,False
+Round of 64,9,michigan,1,howard,16,michigan,0.9057,False
+Round of 64,10,iowa state,2,tennessee state,15,iowa state,0.8996,False
+Round of 64,11,virginia,3,wright state,14,virginia,0.8297,False
+Round of 64,12,alabama,4,hofstra,13,alabama,0.7695,False
+Round of 64,13,texas tech,5,akron,12,texas tech,0.8471,False
+Round of 64,14,tennessee,6,miami (ohio),11,miami (ohio),0.528,True
+Round of 64,15,kentucky,7,santa clara,10,santa clara,0.6017,True
+Round of 64,16,georgia,8,saint louis,9,georgia,0.6443,False
+Round of 64,17,florida,1,lehigh,16,florida,0.8992,False
+Round of 64,18,houston,2,idaho,15,houston,0.903,False
+Round of 64,19,illinois,3,pennsylvania,14,illinois,0.8775,False
+Round of 64,20,nebraska,4,troy,13,nebraska,0.8645,False
+Round of 64,21,vanderbilt,5,mcneese,12,vanderbilt,0.7797,False
+Round of 64,22,north carolina,6,virginia commonwealth,11,north carolina,0.6317,False
+Round of 64,23,saint marys,7,texas a&m,10,saint marys,0.6959,False
+Round of 64,24,clemson,8,iowa,9,iowa,0.7034,True
+Round of 64,25,arizona,1,long island university,16,arizona,0.8939,False
+Round of 64,26,purdue,2,queens nc,15,purdue,0.8916,False
+Round of 64,27,gonzaga,3,kennesaw state,14,gonzaga,0.8987,False
+Round of 64,28,arkansas,4,hawaii,13,arkansas,0.8608,False
+Round of 64,29,wisconsin,5,high point,12,wisconsin,0.7832,False
+Round of 64,30,brigham young,6,nc state,11,brigham young,0.7482,False
+Round of 64,31,miami fl,7,missouri,10,miami fl,0.6221,False
+Round of 64,32,villanova,8,utah state,9,utah state,0.5137,True
+Round of 32,33,ucf,10,furman,15,furman,0.0208,True
+Round of 32,34,ucf,10,connecticut,2,connecticut,0.2694,False
+Round of 32,35,south florida,11,north dakota state,14,south florida,0.0135,False
+Round of 32,36,south florida,11,michigan state,3,michigan state,0.0977,False
+Round of 32,37,northern iowa,12,california baptist,13,california baptist,0.0131,True
+Round of 32,38,northern iowa,12,kansas,4,kansas,0.1123,False
+Round of 32,39,siena,16,ohio state,8,ohio state,0.0611,False
+Round of 32,40,siena,16,texas christian,9,texas christian,0.0278,False
+Round of 32,41,duke,1,ohio state,8,duke,0.5233,False
+Round of 32,42,duke,1,texas christian,9,duke,0.2613,False
+Round of 32,43,st johns ny,5,california baptist,13,st johns ny,0.112,False
+Round of 32,44,st johns ny,5,kansas,4,st johns ny,0.4427,True
+Round of 32,45,louisville,6,north dakota state,14,louisville,0.0929,False
+Round of 32,46,louisville,6,michigan state,3,louisville,0.3862,True
+Round of 32,47,ucla,7,furman,15,ucla,0.0536,False
+Round of 32,48,ucla,7,connecticut,2,connecticut,0.4551,False
+Round of 32,49,santa clara,10,tennessee state,15,santa clara,0.0491,False
+Round of 32,50,santa clara,10,iowa state,2,iowa state,0.4363,False
+Round of 32,51,miami (ohio),11,wright state,14,wright state,0.0767,True
+Round of 32,52,miami (ohio),11,virginia,3,virginia,0.3985,False
+Round of 32,53,akron,12,hofstra,13,hofstra,0.0222,True
+Round of 32,54,akron,12,alabama,4,alabama,0.0924,False
+Round of 32,55,howard,16,georgia,8,georgia,0.0513,False
+Round of 32,56,howard,16,saint louis,9,saint louis,0.0318,False
+Round of 32,57,michigan,1,georgia,8,michigan,0.5166,False
+Round of 32,58,michigan,1,saint louis,9,michigan,0.2845,False
+Round of 32,59,texas tech,5,hofstra,13,texas tech,0.1628,False
+Round of 32,60,texas tech,5,alabama,4,texas tech,0.4774,True
+Round of 32,61,tennessee,6,wright state,14,tennessee,0.0696,False
+Round of 32,62,tennessee,6,virginia,3,virginia,0.2488,False
+Round of 32,63,kentucky,7,tennessee state,15,kentucky,0.0361,False
+Round of 32,64,kentucky,7,iowa state,2,iowa state,0.2855,False
+Round of 32,65,texas a&m,10,idaho,15,texas a&m,0.0231,False
+Round of 32,66,texas a&m,10,houston,2,houston,0.2315,False
+Round of 32,67,virginia commonwealth,11,pennsylvania,14,virginia commonwealth,0.0311,False
+Round of 32,68,virginia commonwealth,11,illinois,3,illinois,0.286,False
+Round of 32,69,mcneese,12,troy,13,troy,0.0173,True
+Round of 32,70,mcneese,12,nebraska,4,nebraska,0.1666,False
+Round of 32,71,lehigh,16,clemson,8,clemson,0.0275,False
+Round of 32,72,lehigh,16,iowa,9,iowa,0.0636,False
+Round of 32,73,florida,1,clemson,8,florida,0.2288,False
+Round of 32,74,florida,1,iowa,9,florida,0.5386,False
+Round of 32,75,vanderbilt,5,troy,13,vanderbilt,0.0896,False
+Round of 32,76,vanderbilt,5,nebraska,4,vanderbilt,0.4088,True
+Round of 32,77,north carolina,6,pennsylvania,14,north carolina,0.0611,False
+Round of 32,78,north carolina,6,illinois,3,illinois,0.4604,False
+Round of 32,79,saint marys,7,idaho,15,saint marys,0.0556,False
+Round of 32,80,saint marys,7,houston,2,houston,0.5158,False
+Round of 32,81,missouri,10,queens nc,15,missouri,0.0305,False
+Round of 32,82,missouri,10,purdue,2,purdue,0.2974,False
+Round of 32,83,nc state,11,kennesaw state,14,nc state,0.0195,False
+Round of 32,84,nc state,11,gonzaga,3,gonzaga,0.1888,False
+Round of 32,85,high point,12,hawaii,13,high point,0.0179,False
+Round of 32,86,high point,12,arkansas,4,arkansas,0.1594,False
+Round of 32,87,long island university,16,villanova,8,villanova,0.0438,False
+Round of 32,88,long island university,16,utah state,9,utah state,0.043,False
+Round of 32,89,arizona,1,villanova,8,arizona,0.3738,False
+Round of 32,90,arizona,1,utah state,9,arizona,0.3963,False
+Round of 32,91,wisconsin,5,hawaii,13,wisconsin,0.0872,False
+Round of 32,92,wisconsin,5,arkansas,4,wisconsin,0.3678,True
+Round of 32,93,brigham young,6,kennesaw state,14,brigham young,0.067,False
+Round of 32,94,brigham young,6,gonzaga,3,gonzaga,0.3902,False
+Round of 32,95,miami fl,7,queens nc,15,miami fl,0.0571,False
+Round of 32,96,miami fl,7,purdue,2,purdue,0.4581,False
+Sweet 16,97,south florida,11,ucf,10,south florida,0.0016,True
+Sweet 16,98,south florida,11,furman,15,south florida,0.0016,False
+Sweet 16,99,south florida,11,connecticut,2,connecticut,0.0279,False
+Sweet 16,100,south florida,11,ucla,7,ucla,0.0053,False
+Sweet 16,101,north dakota state,14,ucf,10,ucf,0.0008,False
+Sweet 16,102,north dakota state,14,furman,15,north dakota state,0.0003,False
+Sweet 16,103,north dakota state,14,connecticut,2,connecticut,0.0161,False
+Sweet 16,104,north dakota state,14,ucla,7,ucla,0.0038,False
+Sweet 16,105,siena,16,northern iowa,12,northern iowa,0.0004,False
+Sweet 16,106,siena,16,california baptist,13,california baptist,0.0001,False
+Sweet 16,107,siena,16,kansas,4,kansas,0.0039,False
+Sweet 16,108,siena,16,st johns ny,5,st johns ny,0.0044,False
+Sweet 16,109,duke,1,northern iowa,12,duke,0.0213,False
+Sweet 16,110,duke,1,california baptist,13,duke,0.0201,False
+Sweet 16,111,duke,1,kansas,4,duke,0.265,False
+Sweet 16,112,duke,1,st johns ny,5,duke,0.3717,False
+Sweet 16,113,michigan state,3,ucf,10,michigan state,0.0235,False
+Sweet 16,114,michigan state,3,furman,15,michigan state,0.0178,False
+Sweet 16,115,michigan state,3,connecticut,2,connecticut,0.1718,False
+Sweet 16,116,michigan state,3,ucla,7,michigan state,0.0574,False
+Sweet 16,117,louisville,6,ucf,10,louisville,0.0207,False
+Sweet 16,118,louisville,6,furman,15,louisville,0.0156,False
+Sweet 16,119,louisville,6,connecticut,2,connecticut,0.2224,False
+Sweet 16,120,louisville,6,ucla,7,louisville,0.0509,False
+Sweet 16,121,ohio state,8,northern iowa,12,ohio state,0.0023,False
+Sweet 16,122,ohio state,8,california baptist,13,ohio state,0.0029,False
+Sweet 16,123,ohio state,8,kansas,4,ohio state,0.0356,True
+Sweet 16,124,ohio state,8,st johns ny,5,st johns ny,0.0416,False
+Sweet 16,125,texas christian,9,northern iowa,12,northern iowa,0.0012,True
+Sweet 16,126,texas christian,9,california baptist,13,texas christian,0.0008,False
+Sweet 16,127,texas christian,9,kansas,4,kansas,0.0179,False
+Sweet 16,128,texas christian,9,st johns ny,5,st johns ny,0.0305,False
+Sweet 16,129,miami (ohio),11,santa clara,10,santa clara,0.0076,False
+Sweet 16,130,miami (ohio),11,tennessee state,15,tennessee state,0.0007,True
+Sweet 16,131,miami (ohio),11,iowa state,2,iowa state,0.0355,False
+Sweet 16,132,miami (ohio),11,kentucky,7,kentucky,0.0047,False
+Sweet 16,133,wright state,14,santa clara,10,santa clara,0.0134,False
+Sweet 16,134,wright state,14,tennessee state,15,tennessee state,0.0007,True
+Sweet 16,135,wright state,14,iowa state,2,iowa state,0.0557,False
+Sweet 16,136,wright state,14,kentucky,7,kentucky,0.0079,False
+Sweet 16,137,howard,16,akron,12,akron,0.0006,False
+Sweet 16,138,howard,16,hofstra,13,hofstra,0.0007,False
+Sweet 16,139,howard,16,alabama,4,alabama,0.0023,False
+Sweet 16,140,howard,16,texas tech,5,texas tech,0.0061,False
+Sweet 16,141,michigan,1,akron,12,michigan,0.0285,False
+Sweet 16,142,michigan,1,hofstra,13,michigan,0.0372,False
+Sweet 16,143,michigan,1,alabama,4,michigan,0.191,False
+Sweet 16,144,michigan,1,texas tech,5,michigan,0.444,False
+Sweet 16,145,virginia,3,santa clara,10,virginia,0.0633,False
+Sweet 16,146,virginia,3,tennessee state,15,virginia,0.0083,False
+Sweet 16,147,virginia,3,iowa state,2,iowa state,0.3193,False
+Sweet 16,148,virginia,3,kentucky,7,virginia,0.0489,False
+Sweet 16,149,tennessee,6,santa clara,10,tennessee,0.0253,False
+Sweet 16,150,tennessee,6,tennessee state,15,tennessee,0.0036,False
+Sweet 16,151,tennessee,6,iowa state,2,iowa state,0.1068,False
+Sweet 16,152,tennessee,6,kentucky,7,tennessee,0.013,False
+Sweet 16,153,georgia,8,akron,12,georgia,0.0032,False
+Sweet 16,154,georgia,8,hofstra,13,georgia,0.0043,False
+Sweet 16,155,georgia,8,alabama,4,georgia,0.0219,True
+Sweet 16,156,georgia,8,texas tech,5,texas tech,0.0441,False
+Sweet 16,157,saint louis,9,akron,12,saint louis,0.0016,False
+Sweet 16,158,saint louis,9,hofstra,13,saint louis,0.0028,False
+Sweet 16,159,saint louis,9,alabama,4,alabama,0.0101,False
+Sweet 16,160,saint louis,9,texas tech,5,texas tech,0.0305,False
+Sweet 16,161,virginia commonwealth,11,texas a&m,10,texas a&m,0.0033,False
+Sweet 16,162,virginia commonwealth,11,idaho,15,virginia commonwealth,0.0006,False
+Sweet 16,163,virginia commonwealth,11,houston,2,houston,0.0447,False
+Sweet 16,164,virginia commonwealth,11,saint marys,7,saint marys,0.0094,False
+Sweet 16,165,pennsylvania,14,texas a&m,10,texas a&m,0.0023,False
+Sweet 16,166,pennsylvania,14,idaho,15,pennsylvania,0.0003,False
+Sweet 16,167,pennsylvania,14,houston,2,houston,0.0199,False
+Sweet 16,168,pennsylvania,14,saint marys,7,saint marys,0.0042,False
+Sweet 16,169,lehigh,16,mcneese,12,mcneese,0.0002,False
+Sweet 16,170,lehigh,16,troy,13,troy,0.0004,False
+Sweet 16,171,lehigh,16,nebraska,4,nebraska,0.0038,False
+Sweet 16,172,lehigh,16,vanderbilt,5,vanderbilt,0.0046,False
+Sweet 16,173,florida,1,mcneese,12,florida,0.0237,False
+Sweet 16,174,florida,1,troy,13,florida,0.0215,False
+Sweet 16,175,florida,1,nebraska,4,florida,0.2772,False
+Sweet 16,176,florida,1,vanderbilt,5,florida,0.3291,False
+Sweet 16,177,illinois,3,texas a&m,10,illinois,0.0413,False
+Sweet 16,178,illinois,3,idaho,15,illinois,0.0128,False
+Sweet 16,179,illinois,3,houston,2,illinois,0.3229,True
+Sweet 16,180,illinois,3,saint marys,7,illinois,0.0924,False
+Sweet 16,181,north carolina,6,texas a&m,10,north carolina,0.006,False
+Sweet 16,182,north carolina,6,idaho,15,north carolina,0.0028,False
+Sweet 16,183,north carolina,6,houston,2,houston,0.0942,False
+Sweet 16,184,north carolina,6,saint marys,7,saint marys,0.0182,True
+Sweet 16,185,clemson,8,mcneese,12,clemson,0.0018,False
+Sweet 16,186,clemson,8,troy,13,clemson,0.0022,False
+Sweet 16,187,clemson,8,nebraska,4,nebraska,0.0231,False
+Sweet 16,188,clemson,8,vanderbilt,5,vanderbilt,0.0256,False
+Sweet 16,189,iowa,9,mcneese,12,iowa,0.0039,False
+Sweet 16,190,iowa,9,troy,13,iowa,0.0031,False
+Sweet 16,191,iowa,9,nebraska,4,nebraska,0.0447,False
+Sweet 16,192,iowa,9,vanderbilt,5,iowa,0.0457,True
+Sweet 16,193,nc state,11,missouri,10,nc state,0.0024,True
+Sweet 16,194,nc state,11,queens nc,15,nc state,0.001,False
+Sweet 16,195,nc state,11,purdue,2,purdue,0.0365,False
+Sweet 16,196,nc state,11,miami fl,7,miami fl,0.0045,False
+Sweet 16,197,kennesaw state,14,missouri,10,missouri,0.0011,False
+Sweet 16,198,kennesaw state,14,queens nc,15,queens nc,0.0002,True
+Sweet 16,199,kennesaw state,14,purdue,2,purdue,0.0098,False
+Sweet 16,200,kennesaw state,14,miami fl,7,miami fl,0.0017,False
+Sweet 16,201,long island university,16,high point,12,high point,0.0007,False
+Sweet 16,202,long island university,16,hawaii,13,hawaii,0.0004,False
+Sweet 16,203,long island university,16,arkansas,4,arkansas,0.0087,False
+Sweet 16,204,long island university,16,wisconsin,5,wisconsin,0.0056,False
+Sweet 16,205,arizona,1,high point,12,arizona,0.0327,False
+Sweet 16,206,arizona,1,hawaii,13,arizona,0.0225,False
+Sweet 16,207,arizona,1,arkansas,4,arizona,0.308,False
+Sweet 16,208,arizona,1,wisconsin,5,arizona,0.3035,False
+Sweet 16,209,gonzaga,3,missouri,10,gonzaga,0.0362,False
+Sweet 16,210,gonzaga,3,queens nc,15,gonzaga,0.011,False
+Sweet 16,211,gonzaga,3,purdue,2,gonzaga,0.222,True
+Sweet 16,212,gonzaga,3,miami fl,7,gonzaga,0.0721,False
+Sweet 16,213,brigham young,6,missouri,10,brigham young,0.0195,False
+Sweet 16,214,brigham young,6,queens nc,15,brigham young,0.0058,False
+Sweet 16,215,brigham young,6,purdue,2,purdue,0.1658,False
+Sweet 16,216,brigham young,6,miami fl,7,brigham young,0.037,False
+Sweet 16,217,villanova,8,high point,12,villanova,0.0035,False
+Sweet 16,218,villanova,8,hawaii,13,villanova,0.0034,False
+Sweet 16,219,villanova,8,arkansas,4,arkansas,0.0325,False
+Sweet 16,220,villanova,8,wisconsin,5,wisconsin,0.0333,False
+Sweet 16,221,utah state,9,high point,12,utah state,0.0045,False
+Sweet 16,222,utah state,9,hawaii,13,utah state,0.0031,False
+Sweet 16,223,utah state,9,arkansas,4,arkansas,0.028,False
+Sweet 16,224,utah state,9,wisconsin,5,wisconsin,0.0344,False
+Elite 8,225,northern iowa,12,south florida,11,south florida,0.0001,False
+Elite 8,226,northern iowa,12,connecticut,2,connecticut,0.0021,False
+Elite 8,227,northern iowa,12,michigan state,3,michigan state,0.001,False
+Elite 8,228,northern iowa,12,louisville,6,louisville,0.0007,False
+Elite 8,229,northern iowa,12,ucla,7,ucla,0.0003,False
+Elite 8,230,california baptist,13,south florida,11,south florida,0.0001,False
+Elite 8,231,california baptist,13,furman,15,furman,0.0001,True
+Elite 8,232,california baptist,13,connecticut,2,connecticut,0.0013,False
+Elite 8,233,california baptist,13,michigan state,3,michigan state,0.0004,False
+Elite 8,234,california baptist,13,louisville,6,louisville,0.001,False
+Elite 8,235,california baptist,13,ucla,7,california baptist,0.0001,True
+Elite 8,236,siena,16,connecticut,2,connecticut,0.0005,False
+Elite 8,237,siena,16,michigan state,3,michigan state,0.0003,False
+Elite 8,238,siena,16,louisville,6,louisville,0.0004,False
+Elite 8,239,siena,16,ucla,7,ucla,0.0001,False
+Elite 8,240,duke,1,ucf,10,duke,0.0063,False
+Elite 8,241,duke,1,south florida,11,duke,0.0053,False
+Elite 8,242,duke,1,north dakota state,14,duke,0.0018,False
+Elite 8,243,duke,1,furman,15,duke,0.0053,False
+Elite 8,244,duke,1,connecticut,2,duke,0.236,False
+Elite 8,245,duke,1,michigan state,3,duke,0.1434,False
+Elite 8,246,duke,1,louisville,6,duke,0.1306,False
+Elite 8,247,duke,1,ucla,7,duke,0.0404,False
+Elite 8,248,kansas,4,ucf,10,kansas,0.0006,False
+Elite 8,249,kansas,4,south florida,11,kansas,0.0008,False
+Elite 8,250,kansas,4,north dakota state,14,kansas,0.0002,False
+Elite 8,251,kansas,4,furman,15,kansas,0.0004,False
+Elite 8,252,kansas,4,connecticut,2,connecticut,0.0226,False
+Elite 8,253,kansas,4,michigan state,3,michigan state,0.0127,False
+Elite 8,254,kansas,4,louisville,6,louisville,0.009,True
+Elite 8,255,kansas,4,ucla,7,ucla,0.0026,True
+Elite 8,256,st johns ny,5,ucf,10,st johns ny,0.001,False
+Elite 8,257,st johns ny,5,south florida,11,st johns ny,0.0006,False
+Elite 8,258,st johns ny,5,north dakota state,14,st johns ny,0.0002,False
+Elite 8,259,st johns ny,5,furman,15,st johns ny,0.001,False
+Elite 8,260,st johns ny,5,connecticut,2,connecticut,0.0419,False
+Elite 8,261,st johns ny,5,michigan state,3,st johns ny,0.0169,True
+Elite 8,262,st johns ny,5,louisville,6,st johns ny,0.0216,False
+Elite 8,263,st johns ny,5,ucla,7,st johns ny,0.0045,False
+Elite 8,264,ohio state,8,ucf,10,ohio state,0.0006,False
+Elite 8,265,ohio state,8,south florida,11,ohio state,0.0012,False
+Elite 8,266,ohio state,8,north dakota state,14,north dakota state,0.0001,True
+Elite 8,267,ohio state,8,furman,15,ohio state,0.0004,False
+Elite 8,268,ohio state,8,connecticut,2,connecticut,0.0245,False
+Elite 8,269,ohio state,8,michigan state,3,michigan state,0.0113,False
+Elite 8,270,ohio state,8,louisville,6,ohio state,0.0095,True
+Elite 8,271,ohio state,8,ucla,7,ucla,0.0031,False
+Elite 8,272,texas christian,9,south florida,11,texas christian,0.0001,False
+Elite 8,273,texas christian,9,connecticut,2,connecticut,0.0047,False
+Elite 8,274,texas christian,9,michigan state,3,michigan state,0.0027,False
+Elite 8,275,texas christian,9,louisville,6,louisville,0.0018,False
+Elite 8,276,texas christian,9,ucla,7,ucla,0.0008,False
+Elite 8,277,akron,12,miami (ohio),11,miami (ohio),0.0001,False
+Elite 8,278,akron,12,tennessee state,15,akron,0.0001,False
+Elite 8,279,akron,12,iowa state,2,iowa state,0.0021,False
+Elite 8,280,akron,12,virginia,3,virginia,0.0013,False
+Elite 8,281,akron,12,tennessee,6,tennessee,0.0004,False
+Elite 8,282,akron,12,kentucky,7,akron,0.0001,True
+Elite 8,283,hofstra,13,santa clara,10,santa clara,0.0003,False
+Elite 8,284,hofstra,13,wright state,14,hofstra,0.0001,False
+Elite 8,285,hofstra,13,iowa state,2,iowa state,0.0024,False
+Elite 8,286,hofstra,13,virginia,3,virginia,0.0022,False
+Elite 8,287,hofstra,13,tennessee,6,hofstra,0.0003,True
+Elite 8,288,hofstra,13,kentucky,7,kentucky,0.0003,False
+Elite 8,289,howard,16,santa clara,10,santa clara,0.0001,False
+Elite 8,290,howard,16,iowa state,2,iowa state,0.001,False
+Elite 8,291,howard,16,virginia,3,virginia,0.0002,False
+Elite 8,292,michigan,1,santa clara,10,michigan,0.0382,False
+Elite 8,293,michigan,1,miami (ohio),11,michigan,0.0018,False
+Elite 8,294,michigan,1,wright state,14,michigan,0.0065,False
+Elite 8,295,michigan,1,tennessee state,15,michigan,0.0021,False
+Elite 8,296,michigan,1,iowa state,2,michigan,0.3038,False
+Elite 8,297,michigan,1,virginia,3,michigan,0.1568,False
+Elite 8,298,michigan,1,tennessee,6,michigan,0.0522,False
+Elite 8,299,michigan,1,kentucky,7,michigan,0.0303,False
+Elite 8,300,alabama,4,santa clara,10,alabama,0.0034,False
+Elite 8,301,alabama,4,miami (ohio),11,alabama,0.0001,False
+Elite 8,302,alabama,4,wright state,14,alabama,0.0003,False
+Elite 8,303,alabama,4,tennessee state,15,alabama,0.0001,False
+Elite 8,304,alabama,4,iowa state,2,iowa state,0.0157,False
+Elite 8,305,alabama,4,virginia,3,virginia,0.0066,False
+Elite 8,306,alabama,4,tennessee,6,alabama,0.0027,False
+Elite 8,307,alabama,4,kentucky,7,alabama,0.0013,False
+Elite 8,308,texas tech,5,santa clara,10,texas tech,0.0081,False
+Elite 8,309,texas tech,5,miami (ohio),11,miami (ohio),0.0003,True
+Elite 8,310,texas tech,5,wright state,14,texas tech,0.0015,False
+Elite 8,311,texas tech,5,tennessee state,15,texas tech,0.0005,False
+Elite 8,312,texas tech,5,iowa state,2,iowa state,0.0461,False
+Elite 8,313,texas tech,5,virginia,3,virginia,0.0219,False
+Elite 8,314,texas tech,5,tennessee,6,texas tech,0.0076,False
+Elite 8,315,texas tech,5,kentucky,7,texas tech,0.0041,False
+Elite 8,316,georgia,8,santa clara,10,georgia,0.0022,False
+Elite 8,317,georgia,8,miami (ohio),11,miami (ohio),0.0002,True
+Elite 8,318,georgia,8,wright state,14,georgia,0.0003,False
+Elite 8,319,georgia,8,iowa state,2,iowa state,0.0257,False
+Elite 8,320,georgia,8,virginia,3,virginia,0.0114,False
+Elite 8,321,georgia,8,tennessee,6,georgia,0.0028,True
+Elite 8,322,georgia,8,kentucky,7,kentucky,0.0013,False
+Elite 8,323,saint louis,9,santa clara,10,saint louis,0.0015,False
+Elite 8,324,saint louis,9,wright state,14,saint louis,0.0002,False
+Elite 8,325,saint louis,9,iowa state,2,iowa state,0.011,False
+Elite 8,326,saint louis,9,virginia,3,virginia,0.0062,False
+Elite 8,327,saint louis,9,tennessee,6,tennessee,0.0013,False
+Elite 8,328,saint louis,9,kentucky,7,saint louis,0.0003,True
+Elite 8,329,mcneese,12,virginia commonwealth,11,virginia commonwealth,0.0001,False
+Elite 8,330,mcneese,12,pennsylvania,14,mcneese,0.0001,False
+Elite 8,331,mcneese,12,houston,2,houston,0.0022,False
+Elite 8,332,mcneese,12,illinois,3,illinois,0.003,False
+Elite 8,333,mcneese,12,north carolina,6,north carolina,0.0005,False
+Elite 8,334,mcneese,12,saint marys,7,saint marys,0.0005,False
+Elite 8,335,troy,13,texas a&m,10,texas a&m,0.0001,False
+Elite 8,336,troy,13,pennsylvania,14,pennsylvania,0.0001,True
+Elite 8,337,troy,13,houston,2,houston,0.002,False
+Elite 8,338,troy,13,illinois,3,illinois,0.0018,False
+Elite 8,339,troy,13,north carolina,6,north carolina,0.0001,False
+Elite 8,340,troy,13,saint marys,7,saint marys,0.0003,False
+Elite 8,341,lehigh,16,virginia commonwealth,11,virginia commonwealth,0.0001,False
+Elite 8,342,lehigh,16,houston,2,houston,0.0003,False
+Elite 8,343,lehigh,16,illinois,3,illinois,0.0002,False
+Elite 8,344,lehigh,16,saint marys,7,saint marys,0.0001,False
+Elite 8,345,florida,1,texas a&m,10,florida,0.0088,False
+Elite 8,346,florida,1,virginia commonwealth,11,florida,0.0074,False
+Elite 8,347,florida,1,pennsylvania,14,florida,0.0022,False
+Elite 8,348,florida,1,idaho,15,florida,0.0009,False
+Elite 8,349,florida,1,houston,2,florida,0.1576,False
+Elite 8,350,florida,1,illinois,3,florida,0.1738,False
+Elite 8,351,florida,1,north carolina,6,florida,0.0205,False
+Elite 8,352,florida,1,saint marys,7,florida,0.0374,False
+Elite 8,353,nebraska,4,texas a&m,10,nebraska,0.001,False
+Elite 8,354,nebraska,4,virginia commonwealth,11,nebraska,0.0016,False
+Elite 8,355,nebraska,4,pennsylvania,14,nebraska,0.0003,False
+Elite 8,356,nebraska,4,idaho,15,nebraska,0.0003,False
+Elite 8,357,nebraska,4,houston,2,houston,0.0381,False
+Elite 8,358,nebraska,4,illinois,3,illinois,0.0466,False
+Elite 8,359,nebraska,4,north carolina,6,north carolina,0.0027,True
+Elite 8,360,nebraska,4,saint marys,7,nebraska,0.0043,False
+Elite 8,361,vanderbilt,5,texas a&m,10,vanderbilt,0.0015,False
+Elite 8,362,vanderbilt,5,virginia commonwealth,11,vanderbilt,0.0006,False
+Elite 8,363,vanderbilt,5,pennsylvania,14,vanderbilt,0.0006,False
+Elite 8,364,vanderbilt,5,idaho,15,vanderbilt,0.0003,False
+Elite 8,365,vanderbilt,5,houston,2,houston,0.0332,False
+Elite 8,366,vanderbilt,5,illinois,3,illinois,0.0363,False
+Elite 8,367,vanderbilt,5,north carolina,6,vanderbilt,0.0024,False
+Elite 8,368,vanderbilt,5,saint marys,7,vanderbilt,0.0038,False
+Elite 8,369,clemson,8,texas a&m,10,clemson,0.0001,False
+Elite 8,370,clemson,8,virginia commonwealth,11,clemson,0.0002,False
+Elite 8,371,clemson,8,pennsylvania,14,clemson,0.0001,False
+Elite 8,372,clemson,8,houston,2,houston,0.0058,False
+Elite 8,373,clemson,8,illinois,3,illinois,0.006,False
+Elite 8,374,clemson,8,north carolina,6,north carolina,0.0003,False
+Elite 8,375,clemson,8,saint marys,7,saint marys,0.0005,False
+Elite 8,376,iowa,9,texas a&m,10,iowa,0.0012,False
+Elite 8,377,iowa,9,virginia commonwealth,11,iowa,0.0004,False
+Elite 8,378,iowa,9,idaho,15,iowa,0.0001,False
+Elite 8,379,iowa,9,houston,2,houston,0.0256,False
+Elite 8,380,iowa,9,illinois,3,illinois,0.0298,False
+Elite 8,381,iowa,9,north carolina,6,iowa,0.0022,True
+Elite 8,382,iowa,9,saint marys,7,saint marys,0.0029,False
+Elite 8,383,high point,12,purdue,2,purdue,0.0022,False
+Elite 8,384,high point,12,gonzaga,3,gonzaga,0.0021,False
+Elite 8,385,high point,12,brigham young,6,brigham young,0.0013,False
+Elite 8,386,high point,12,miami fl,7,miami fl,0.0002,False
+Elite 8,387,hawaii,13,nc state,11,nc state,0.0002,False
+Elite 8,388,hawaii,13,purdue,2,purdue,0.0017,False
+Elite 8,389,hawaii,13,gonzaga,3,gonzaga,0.0014,False
+Elite 8,390,hawaii,13,brigham young,6,brigham young,0.0008,False
+Elite 8,391,hawaii,13,miami fl,7,miami fl,0.0005,False
+Elite 8,392,long island university,16,missouri,10,long island university,0.0001,True
+Elite 8,393,long island university,16,nc state,11,nc state,0.0001,False
+Elite 8,394,long island university,16,purdue,2,purdue,0.0011,False
+Elite 8,395,long island university,16,gonzaga,3,gonzaga,0.0015,False
+Elite 8,396,long island university,16,brigham young,6,brigham young,0.0005,False
+Elite 8,397,long island university,16,miami fl,7,miami fl,0.0002,False
+Elite 8,398,arizona,1,missouri,10,arizona,0.0076,False
+Elite 8,399,arizona,1,nc state,11,arizona,0.0075,False
+Elite 8,400,arizona,1,kennesaw state,14,arizona,0.001,False
+Elite 8,401,arizona,1,queens nc,15,arizona,0.0017,False
+Elite 8,402,arizona,1,purdue,2,arizona,0.2207,False
+Elite 8,403,arizona,1,gonzaga,3,arizona,0.1802,False
+Elite 8,404,arizona,1,brigham young,6,arizona,0.0935,False
+Elite 8,405,arizona,1,miami fl,7,arizona,0.0228,False
+Elite 8,406,arkansas,4,missouri,10,arkansas,0.0013,False
+Elite 8,407,arkansas,4,nc state,11,arkansas,0.001,False
+Elite 8,408,arkansas,4,kennesaw state,14,arkansas,0.0004,False
+Elite 8,409,arkansas,4,queens nc,15,arkansas,0.0001,False
+Elite 8,410,arkansas,4,purdue,2,purdue,0.0371,False
+Elite 8,411,arkansas,4,gonzaga,3,gonzaga,0.0195,False
+Elite 8,412,arkansas,4,brigham young,6,arkansas,0.0137,False
+Elite 8,413,arkansas,4,miami fl,7,arkansas,0.0032,False
+Elite 8,414,wisconsin,5,missouri,10,wisconsin,0.001,False
+Elite 8,415,wisconsin,5,nc state,11,nc state,0.0015,True
+Elite 8,416,wisconsin,5,kennesaw state,14,wisconsin,0.0001,False
+Elite 8,417,wisconsin,5,queens nc,15,wisconsin,0.0005,False
+Elite 8,418,wisconsin,5,purdue,2,purdue,0.0429,False
+Elite 8,419,wisconsin,5,gonzaga,3,gonzaga,0.0291,False
+Elite 8,420,wisconsin,5,brigham young,6,wisconsin,0.0108,False
+Elite 8,421,wisconsin,5,miami fl,7,wisconsin,0.0031,False
+Elite 8,422,villanova,8,missouri,10,villanova,0.0001,False
+Elite 8,423,villanova,8,nc state,11,nc state,0.0004,True
+Elite 8,424,villanova,8,kennesaw state,14,villanova,0.0004,False
+Elite 8,425,villanova,8,queens nc,15,villanova,0.0002,False
+Elite 8,426,villanova,8,purdue,2,purdue,0.0131,False
+Elite 8,427,villanova,8,gonzaga,3,gonzaga,0.0103,False
+Elite 8,428,villanova,8,brigham young,6,brigham young,0.0036,False
+Elite 8,429,villanova,8,miami fl,7,miami fl,0.0005,False
+Elite 8,430,utah state,9,missouri,10,missouri,0.0005,True
+Elite 8,431,utah state,9,nc state,11,nc state,0.0004,True
+Elite 8,432,utah state,9,queens nc,15,utah state,0.0001,False
+Elite 8,433,utah state,9,purdue,2,purdue,0.015,False
+Elite 8,434,utah state,9,gonzaga,3,gonzaga,0.0094,False
+Elite 8,435,utah state,9,brigham young,6,brigham young,0.0037,False
+Elite 8,436,utah state,9,miami fl,7,utah state,0.0012,True
+Final Four,437,duke,1,arizona,1,duke,0.46,False
+Final Four,438,florida,1,michigan,1,michigan,0.2994,False
+Championship,439,duke,1,michigan,1,duke,0.3636,False

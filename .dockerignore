@@ -1,0 +1,9 @@
+data/raw/cache/
+.venv/
+app/
+notebooks/
+.git/
+*.parquet
+supabase/
+*.md
+__pycache__/

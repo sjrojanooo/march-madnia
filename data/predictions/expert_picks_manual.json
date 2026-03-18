@@ -1,0 +1,430 @@
+{
+  "metadata": {
+    "season": 2026,
+    "expert_count": 5,
+    "sources": ["espn", "cbs", "yahoo"],
+    "description": "Manual expert bracket picks for 2026 NCAA Tournament. Team names are slugs matching bracket_predictions.json format."
+  },
+  "experts": {
+    "joe_lunardi_espn": {
+      "expert_name": "Joe Lunardi",
+      "source": "espn",
+      "champion": "duke",
+      "final_four": ["duke", "florida", "houston", "iowa state"],
+      "elite_8": ["duke", "connecticut", "florida", "houston", "arizona", "purdue", "michigan", "iowa state"],
+      "picks_by_round": {
+        "R64": {
+          "East_R64_1v16": "duke",
+          "East_R64_8v9": "tcu",
+          "East_R64_5v12": "st johns ny",
+          "East_R64_4v13": "kansas",
+          "East_R64_6v11": "louisville",
+          "East_R64_3v14": "michigan state",
+          "East_R64_7v10": "ucla",
+          "East_R64_2v15": "connecticut",
+          "West_R64_1v16": "arizona",
+          "West_R64_8v9": "villanova",
+          "West_R64_5v12": "wisconsin",
+          "West_R64_4v13": "arkansas",
+          "West_R64_6v11": "brigham young",
+          "West_R64_3v14": "gonzaga",
+          "West_R64_7v10": "miami fl",
+          "West_R64_2v15": "purdue",
+          "South_R64_1v16": "florida",
+          "South_R64_8v9": "clemson",
+          "South_R64_5v12": "vanderbilt",
+          "South_R64_4v13": "nebraska",
+          "South_R64_6v11": "north carolina",
+          "South_R64_3v14": "illinois",
+          "South_R64_7v10": "saint marys",
+          "South_R64_2v15": "houston",
+          "Midwest_R64_1v16": "michigan",
+          "Midwest_R64_8v9": "georgia",
+          "Midwest_R64_5v12": "texas tech",
+          "Midwest_R64_4v13": "alabama",
+          "Midwest_R64_6v11": "tennessee",
+          "Midwest_R64_3v14": "virginia",
+          "Midwest_R64_7v10": "kentucky",
+          "Midwest_R64_2v15": "iowa state"
+        },
+        "R32": {
+          "East_R32_1v9": "duke",
+          "East_R32_5v4": "kansas",
+          "East_R32_6v3": "michigan state",
+          "East_R32_7v2": "connecticut",
+          "West_R32_1v8": "arizona",
+          "West_R32_5v4": "wisconsin",
+          "West_R32_6v3": "gonzaga",
+          "West_R32_7v2": "purdue",
+          "South_R32_1v8": "florida",
+          "South_R32_5v4": "vanderbilt",
+          "South_R32_6v3": "illinois",
+          "South_R32_7v2": "houston",
+          "Midwest_R32_1v8": "michigan",
+          "Midwest_R32_5v4": "alabama",
+          "Midwest_R32_6v3": "virginia",
+          "Midwest_R32_7v2": "iowa state"
+        },
+        "S16": {
+          "East_S16_1v4": "duke",
+          "East_S16_3v2": "connecticut",
+          "West_S16_1v5": "arizona",
+          "West_S16_3v2": "purdue",
+          "South_S16_1v5": "florida",
+          "South_S16_3v2": "houston",
+          "Midwest_S16_1v4": "michigan",
+          "Midwest_S16_3v2": "iowa state"
+        },
+        "E8": {
+          "East_E8_1v2": "duke",
+          "West_E8_1v2": "arizona",
+          "South_E8_1v2": "florida",
+          "Midwest_E8_1v2": "iowa state"
+        },
+        "FF": {
+          "FF_EastvWest": "duke",
+          "FF_SouthvMidwest": "florida"
+        },
+        "Championship": {
+          "Championship": "duke"
+        }
+      }
+    },
+    "jay_bilas_espn": {
+      "expert_name": "Jay Bilas",
+      "source": "espn",
+      "champion": "florida",
+      "final_four": ["connecticut", "florida", "gonzaga", "alabama"],
+      "elite_8": ["connecticut", "st johns ny", "florida", "houston", "gonzaga", "arkansas", "alabama", "iowa state"],
+      "picks_by_round": {
+        "R64": {
+          "East_R64_1v16": "duke",
+          "East_R64_8v9": "ohio state",
+          "East_R64_5v12": "st johns ny",
+          "East_R64_4v13": "kansas",
+          "East_R64_6v11": "louisville",
+          "East_R64_3v14": "michigan state",
+          "East_R64_7v10": "ucf",
+          "East_R64_2v15": "connecticut",
+          "West_R64_1v16": "arizona",
+          "West_R64_8v9": "utah state",
+          "West_R64_5v12": "wisconsin",
+          "West_R64_4v13": "arkansas",
+          "West_R64_6v11": "brigham young",
+          "West_R64_3v14": "gonzaga",
+          "West_R64_7v10": "missouri",
+          "West_R64_2v15": "purdue",
+          "South_R64_1v16": "florida",
+          "South_R64_8v9": "iowa",
+          "South_R64_5v12": "vanderbilt",
+          "South_R64_4v13": "nebraska",
+          "South_R64_6v11": "north carolina",
+          "South_R64_3v14": "illinois",
+          "South_R64_7v10": "saint marys",
+          "South_R64_2v15": "houston",
+          "Midwest_R64_1v16": "michigan",
+          "Midwest_R64_8v9": "georgia",
+          "Midwest_R64_5v12": "texas tech",
+          "Midwest_R64_4v13": "alabama",
+          "Midwest_R64_6v11": "tennessee",
+          "Midwest_R64_3v14": "virginia",
+          "Midwest_R64_7v10": "kentucky",
+          "Midwest_R64_2v15": "iowa state"
+        },
+        "R32": {
+          "East_R32_1v8": "duke",
+          "East_R32_5v4": "st johns ny",
+          "East_R32_6v3": "louisville",
+          "East_R32_10v2": "connecticut",
+          "West_R32_1v9": "arizona",
+          "West_R32_5v4": "arkansas",
+          "West_R32_6v3": "gonzaga",
+          "West_R32_7v2": "purdue",
+          "South_R32_1v9": "florida",
+          "South_R32_5v4": "vanderbilt",
+          "South_R32_6v3": "illinois",
+          "South_R32_7v2": "houston",
+          "Midwest_R32_1v8": "michigan",
+          "Midwest_R32_5v4": "alabama",
+          "Midwest_R32_6v3": "tennessee",
+          "Midwest_R32_7v2": "iowa state"
+        },
+        "S16": {
+          "East_S16_1v5": "st johns ny",
+          "East_S16_6v2": "connecticut",
+          "West_S16_1v4": "arizona",
+          "West_S16_3v2": "gonzaga",
+          "South_S16_1v5": "florida",
+          "South_S16_3v2": "houston",
+          "Midwest_S16_1v4": "alabama",
+          "Midwest_S16_6v2": "iowa state"
+        },
+        "E8": {
+          "East_E8_5v2": "connecticut",
+          "West_E8_1v3": "gonzaga",
+          "South_E8_1v2": "florida",
+          "Midwest_E8_4v2": "alabama"
+        },
+        "FF": {
+          "FF_EastvWest": "connecticut",
+          "FF_SouthvMidwest": "florida"
+        },
+        "Championship": {
+          "Championship": "florida"
+        }
+      }
+    },
+    "gary_parrish_cbs": {
+      "expert_name": "Gary Parrish",
+      "source": "cbs",
+      "champion": "houston",
+      "final_four": ["duke", "houston", "arizona", "iowa state"],
+      "elite_8": ["duke", "kansas", "houston", "illinois", "arizona", "purdue", "michigan", "iowa state"],
+      "picks_by_round": {
+        "R64": {
+          "East_R64_1v16": "duke",
+          "East_R64_8v9": "ohio state",
+          "East_R64_5v12": "st johns ny",
+          "East_R64_4v13": "kansas",
+          "East_R64_6v11": "louisville",
+          "East_R64_3v14": "michigan state",
+          "East_R64_7v10": "ucla",
+          "East_R64_2v15": "connecticut",
+          "West_R64_1v16": "arizona",
+          "West_R64_8v9": "villanova",
+          "West_R64_5v12": "wisconsin",
+          "West_R64_4v13": "arkansas",
+          "West_R64_6v11": "brigham young",
+          "West_R64_3v14": "gonzaga",
+          "West_R64_7v10": "miami fl",
+          "West_R64_2v15": "purdue",
+          "South_R64_1v16": "florida",
+          "South_R64_8v9": "clemson",
+          "South_R64_5v12": "vanderbilt",
+          "South_R64_4v13": "nebraska",
+          "South_R64_6v11": "north carolina",
+          "South_R64_3v14": "illinois",
+          "South_R64_7v10": "saint marys",
+          "South_R64_2v15": "houston",
+          "Midwest_R64_1v16": "michigan",
+          "Midwest_R64_8v9": "georgia",
+          "Midwest_R64_5v12": "texas tech",
+          "Midwest_R64_4v13": "alabama",
+          "Midwest_R64_6v11": "tennessee",
+          "Midwest_R64_3v14": "virginia",
+          "Midwest_R64_7v10": "kentucky",
+          "Midwest_R64_2v15": "iowa state"
+        },
+        "R32": {
+          "East_R32_1v8": "duke",
+          "East_R32_5v4": "kansas",
+          "East_R32_6v3": "michigan state",
+          "East_R32_7v2": "connecticut",
+          "West_R32_1v8": "arizona",
+          "West_R32_5v4": "wisconsin",
+          "West_R32_6v3": "gonzaga",
+          "West_R32_7v2": "purdue",
+          "South_R32_1v8": "florida",
+          "South_R32_5v4": "vanderbilt",
+          "South_R32_6v3": "illinois",
+          "South_R32_7v2": "houston",
+          "Midwest_R32_1v8": "michigan",
+          "Midwest_R32_5v4": "texas tech",
+          "Midwest_R32_6v3": "virginia",
+          "Midwest_R32_7v2": "iowa state"
+        },
+        "S16": {
+          "East_S16_1v4": "duke",
+          "East_S16_3v2": "connecticut",
+          "West_S16_1v5": "arizona",
+          "West_S16_3v2": "purdue",
+          "South_S16_1v5": "florida",
+          "South_S16_3v2": "houston",
+          "Midwest_S16_1v5": "michigan",
+          "Midwest_S16_3v2": "iowa state"
+        },
+        "E8": {
+          "East_E8_1v2": "duke",
+          "West_E8_1v2": "arizona",
+          "South_E8_1v2": "houston",
+          "Midwest_E8_1v2": "iowa state"
+        },
+        "FF": {
+          "FF_EastvWest": "duke",
+          "FF_SouthvMidwest": "houston"
+        },
+        "Championship": {
+          "Championship": "houston"
+        }
+      }
+    },
+    "matt_norlander_cbs": {
+      "expert_name": "Matt Norlander",
+      "source": "cbs",
+      "champion": "florida",
+      "final_four": ["duke", "florida", "purdue", "michigan"],
+      "elite_8": ["duke", "michigan state", "florida", "illinois", "purdue", "gonzaga", "michigan", "alabama"],
+      "picks_by_round": {
+        "R64": {
+          "East_R64_1v16": "duke",
+          "East_R64_8v9": "tcu",
+          "East_R64_5v12": "st johns ny",
+          "East_R64_4v13": "kansas",
+          "East_R64_6v11": "louisville",
+          "East_R64_3v14": "michigan state",
+          "East_R64_7v10": "ucla",
+          "East_R64_2v15": "connecticut",
+          "West_R64_1v16": "arizona",
+          "West_R64_8v9": "villanova",
+          "West_R64_5v12": "wisconsin",
+          "West_R64_4v13": "arkansas",
+          "West_R64_6v11": "brigham young",
+          "West_R64_3v14": "gonzaga",
+          "West_R64_7v10": "miami fl",
+          "West_R64_2v15": "purdue",
+          "South_R64_1v16": "florida",
+          "South_R64_8v9": "iowa",
+          "South_R64_5v12": "vanderbilt",
+          "South_R64_4v13": "nebraska",
+          "South_R64_6v11": "north carolina",
+          "South_R64_3v14": "illinois",
+          "South_R64_7v10": "saint marys",
+          "South_R64_2v15": "houston",
+          "Midwest_R64_1v16": "michigan",
+          "Midwest_R64_8v9": "georgia",
+          "Midwest_R64_5v12": "texas tech",
+          "Midwest_R64_4v13": "alabama",
+          "Midwest_R64_6v11": "tennessee",
+          "Midwest_R64_3v14": "virginia",
+          "Midwest_R64_7v10": "kentucky",
+          "Midwest_R64_2v15": "iowa state"
+        },
+        "R32": {
+          "East_R32_1v9": "duke",
+          "East_R32_5v4": "kansas",
+          "East_R32_6v3": "michigan state",
+          "East_R32_7v2": "connecticut",
+          "West_R32_1v8": "arizona",
+          "West_R32_5v4": "wisconsin",
+          "West_R32_6v3": "gonzaga",
+          "West_R32_7v2": "purdue",
+          "South_R32_1v9": "florida",
+          "South_R32_5v4": "vanderbilt",
+          "South_R32_6v3": "illinois",
+          "South_R32_7v2": "houston",
+          "Midwest_R32_1v8": "michigan",
+          "Midwest_R32_5v4": "alabama",
+          "Midwest_R32_6v3": "tennessee",
+          "Midwest_R32_7v2": "iowa state"
+        },
+        "S16": {
+          "East_S16_1v4": "duke",
+          "East_S16_3v2": "michigan state",
+          "West_S16_1v5": "arizona",
+          "West_S16_3v2": "purdue",
+          "South_S16_1v5": "florida",
+          "South_S16_3v2": "illinois",
+          "Midwest_S16_1v4": "michigan",
+          "Midwest_S16_6v2": "iowa state"
+        },
+        "E8": {
+          "East_E8_1v3": "duke",
+          "West_E8_1v2": "purdue",
+          "South_E8_1v3": "florida",
+          "Midwest_E8_1v2": "michigan"
+        },
+        "FF": {
+          "FF_EastvWest": "duke",
+          "FF_SouthvMidwest": "florida"
+        },
+        "Championship": {
+          "Championship": "florida"
+        }
+      }
+    },
+    "yahoo_expert": {
+      "expert_name": "Yahoo Expert",
+      "source": "yahoo",
+      "champion": "connecticut",
+      "final_four": ["connecticut", "gonzaga", "houston", "alabama"],
+      "elite_8": ["connecticut", "louisville", "houston", "north carolina", "gonzaga", "arkansas", "alabama", "kentucky"],
+      "picks_by_round": {
+        "R64": {
+          "East_R64_1v16": "duke",
+          "East_R64_8v9": "ohio state",
+          "East_R64_5v12": "northern iowa",
+          "East_R64_4v13": "kansas",
+          "East_R64_6v11": "louisville",
+          "East_R64_3v14": "michigan state",
+          "East_R64_7v10": "ucf",
+          "East_R64_2v15": "connecticut",
+          "West_R64_1v16": "arizona",
+          "West_R64_8v9": "utah state",
+          "West_R64_5v12": "high point",
+          "West_R64_4v13": "arkansas",
+          "West_R64_6v11": "brigham young",
+          "West_R64_3v14": "gonzaga",
+          "West_R64_7v10": "missouri",
+          "West_R64_2v15": "purdue",
+          "South_R64_1v16": "florida",
+          "South_R64_8v9": "iowa",
+          "South_R64_5v12": "mcneese",
+          "South_R64_4v13": "nebraska",
+          "South_R64_6v11": "vcu",
+          "South_R64_3v14": "illinois",
+          "South_R64_7v10": "texas a&m",
+          "South_R64_2v15": "houston",
+          "Midwest_R64_1v16": "michigan",
+          "Midwest_R64_8v9": "saint louis",
+          "Midwest_R64_5v12": "akron",
+          "Midwest_R64_4v13": "alabama",
+          "Midwest_R64_6v11": "tennessee",
+          "Midwest_R64_3v14": "virginia",
+          "Midwest_R64_7v10": "kentucky",
+          "Midwest_R64_2v15": "iowa state"
+        },
+        "R32": {
+          "East_R32_1v8": "duke",
+          "East_R32_12v4": "northern iowa",
+          "East_R32_6v3": "louisville",
+          "East_R32_10v2": "connecticut",
+          "West_R32_1v9": "arizona",
+          "West_R32_12v4": "arkansas",
+          "West_R32_6v3": "gonzaga",
+          "West_R32_7v2": "purdue",
+          "South_R32_1v9": "florida",
+          "South_R32_12v4": "mcneese",
+          "South_R32_11v3": "vcu",
+          "South_R32_10v2": "houston",
+          "Midwest_R32_1v9": "michigan",
+          "Midwest_R32_12v4": "alabama",
+          "Midwest_R32_6v3": "tennessee",
+          "Midwest_R32_7v2": "kentucky"
+        },
+        "S16": {
+          "East_S16_1v12": "duke",
+          "East_S16_6v2": "connecticut",
+          "West_S16_1v4": "arkansas",
+          "West_S16_3v2": "gonzaga",
+          "South_S16_1v12": "florida",
+          "South_S16_11v2": "houston",
+          "Midwest_S16_1v4": "alabama",
+          "Midwest_S16_6v7": "kentucky"
+        },
+        "E8": {
+          "East_E8_1v2": "connecticut",
+          "West_E8_4v3": "gonzaga",
+          "South_E8_1v2": "houston",
+          "Midwest_E8_4v7": "alabama"
+        },
+        "FF": {
+          "FF_EastvWest": "connecticut",
+          "FF_SouthvMidwest": "houston"
+        },
+        "Championship": {
+          "Championship": "connecticut"
+        }
+      }
+    }
+  }
+}
