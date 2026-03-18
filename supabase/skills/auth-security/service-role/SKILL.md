@@ -1,6 +1,7 @@
 ---
-description: Service role key — backend only, never in frontend, single client pattern, bypasses RLS for system operations
-globs: ["api/**/*.py", "**/*.dart", "**/.env*"]
+name: Service Role
+description: This skill should be used when the user asks to "use the service role key", "bypass RLS from the backend", "set up the Supabase client in the API", "seed data into Supabase", or "access another user's data from the backend". It covers the single service-role client pattern, backend-only key usage, and user-scoped query requirements.
+version: 1.0.0
 ---
 
 # Service Role

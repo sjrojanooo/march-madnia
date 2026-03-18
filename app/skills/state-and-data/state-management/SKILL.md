@@ -1,6 +1,7 @@
 ---
-description: State management — Provider + context.read/watch pattern, state enums, auth isolation, repository caching
-globs: ["**/*.dart"]
+name: State Management
+description: This skill should be used when the user asks to "add a new provider", "register a repository in MultiProvider", "use context.read or context.watch", "add state enums for loading states", or "implement repository caching". It covers Provider-based state management including MultiProvider setup, context.read/watch patterns, state enums, auth state isolation, and repository caching.
+version: 1.0.0
 ---
 
 # State Management

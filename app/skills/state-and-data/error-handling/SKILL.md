@@ -1,6 +1,7 @@
 ---
-description: Error handling — typed exceptions, catch-rethrow pattern, dart:developer logging, HTTP status mapping
-globs: ["**/*.dart"]
+name: Error Handling
+description: This skill should be used when the user asks to "add error handling to a widget", "create a typed exception class", "fix raw error body exposure", "add error logging with dart:developer", or "render error states in the UI". It covers error handling patterns including typed exceptions, catch-rethrow with safe messages, dart:developer logging, widget error state rendering, and HTTP status mapping.
+version: 1.0.0
 ---
 
 # Error Handling

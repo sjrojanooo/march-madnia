@@ -1,6 +1,7 @@
 ---
-description: Supabase auth token lifecycle — session access, token passing, sign-out cleanup, PKCE flow
-globs: ["**/*.dart"]
+name: Auth Token Handling
+description: This skill should be used when the user asks to "add authentication to an API call", "pass a Bearer token", "handle sign-out cleanup", "access the Supabase session token", or "configure PKCE auth flow". It covers the Supabase auth token lifecycle including session access, token passing, sign-out state cleanup, and PKCE flow configuration.
+version: 1.0.0
 ---
 
 # Auth Token Handling

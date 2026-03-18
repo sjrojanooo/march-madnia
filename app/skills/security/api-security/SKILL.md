@@ -1,6 +1,7 @@
 ---
-description: API security — Bearer headers, HTTPS enforcement, safe error messages, http.Client injection
-globs: ["**/*.dart"]
+name: API Security
+description: This skill should be used when the user asks to "add auth headers to API requests", "fix the raw error body exposure", "inject an http.Client for testing", "enforce HTTPS in production", or "map HTTP status codes to user messages". It covers API security patterns including Bearer token headers, HTTPS enforcement, safe error messages, and http.Client injection for testability.
+version: 1.0.0
 ---
 
 # API Security

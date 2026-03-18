@@ -1,5 +1,7 @@
 ---
-description: "Reference for error handling in the March Madness FastAPI backend — HTTPException patterns, structured error responses, SSE error payloads, validation error handling"
+name: Error Handling
+description: "Use this skill when raising HTTPExceptions, creating structured error responses, handling validation errors, formatting SSE error payloads, or adding custom exception classes. Trigger phrases: 'handle this error', 'add error handling', 'return a 404', 'structured error response', 'SSE error payload', 'create exception class', 'fix error format'."
+version: 1.0.0
 ---
 
 # Error Handling Patterns

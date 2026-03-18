@@ -1,6 +1,7 @@
 ---
-description: "Reference for testing the March Madness FastAPI backend — pytest patterns, fixtures, async testing, integration tests"
-globs: "api/tests/**"
+name: API Testing
+description: "Use this skill when writing pytest tests for FastAPI endpoints, creating test fixtures, generating test JWTs, testing auth boundaries, or setting up async test infrastructure. Trigger phrases: 'write a test', 'add tests for this endpoint', 'test fixture', 'test JWT token', 'pytest setup', 'integration test', 'test auth'."
+version: 1.0.0
 ---
 
 # Testing Patterns
