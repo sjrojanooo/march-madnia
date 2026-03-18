@@ -32,11 +32,23 @@ Predict NCAA March Madness 2026 bracket outcomes using historical tournament dat
 
 ## Pipeline Stages
 ```
-1. Scrape      → src/scraping/sports_ref.py      → data/raw/*.parquet
+1. Scrape      → scripts/scrape_season.py        → data/raw/*.parquet
 2. Features    → src/features/team_features.py   → data/processed/team_features.parquet
                → src/features/matchup.py         → data/processed/matchup_training.parquet
-3. Train       → scripts/train_with2025.py       → data/models/ensemble_with2025.joblib
-4. Predict     → scripts/predict_bracket.py      → data/predictions/bracket_predictions.*
+3. Train       → scripts/train.py                → data/models/ensemble_{name}.joblib
+4. Predict     → scripts/predict.py              → data/predictions/bracket_predictions.*
+5. Validate    → scripts/validate.py             → holdout accuracy + bracket comparison
+```
+
+## Config Files
+```
+config/
+  seasons.yaml              # Training season presets (with2025, no2024, all)
+  features/slim_8.txt       # 8 selected features (default for training)
+  brackets/bracket_2026.json
+  brackets/bracket_2025.json
+  brackets/results_2025.json
+src/config.py               # Loader: load_seasons(), load_features(), load_bracket()
 ```
 
 ## Key Commands
@@ -61,14 +73,21 @@ make logs
 # Rebuild features after scraping new data
 uv run python -m src.pipeline --stage features
 
-# Retrain model
-uv run python scripts/train_with2025.py
+# Retrain model (default: with2025 preset, slim features)
+uv run python scripts/train.py
+uv run python scripts/train.py --preset no2024
+uv run python scripts/train.py --seasons 2019 2021 2022 2023 2025
+uv run python scripts/train.py --features all --name full_features
 
 # Run predictions
-uv run python scripts/predict_bracket.py
+uv run python scripts/predict.py --season 2026
 
-# Scrape a specific season (extend VALID_SEASONS first)
-uv run python -m src.scraping.sports_ref
+# Validate on holdout season
+uv run python scripts/validate.py --holdout 2025
+uv run python scripts/validate.py --holdout 2025 --bracket config/brackets/bracket_2025.json --actuals config/brackets/results_2025.json
+
+# Scrape a specific season
+uv run python scripts/scrape_season.py --season 2026
 ```
 
 ## Known Dead Features (zero variance — do not use)

@@ -1,0 +1,8 @@
+presets:
+  with2025:
+    train: [2019, 2021, 2022, 2023, 2025]
+    note: "2024 excluded to avoid double-Florida bias"
+  no2024:
+    train: [2019, 2021, 2022, 2023]
+  all:
+    train: [2019, 2021, 2022, 2023, 2024, 2025]
