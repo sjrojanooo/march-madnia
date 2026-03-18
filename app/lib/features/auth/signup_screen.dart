@@ -1,6 +1,9 @@
+import 'dart:developer' as developer;
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:march_madness/data/services/supabase_service.dart';
 
 class SignupScreen extends StatefulWidget {
@@ -38,8 +41,12 @@ class _SignupScreenState extends State<SignupScreen> {
         password: _passwordController.text,
       );
       if (mounted) context.go('/bracket');
+    } on AuthException catch (e) {
+      developer.log('Auth error: ${e.message}', name: 'SignupScreen');
+      setState(() => _error = e.message);
     } catch (e) {
-      setState(() => _error = e.toString());
+      developer.log('Signup error: $e', name: 'SignupScreen');
+      setState(() => _error = 'Something went wrong. Please try again.');
     } finally {
       if (mounted) setState(() => _loading = false);
     }

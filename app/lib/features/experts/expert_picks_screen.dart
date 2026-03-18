@@ -1,3 +1,5 @@
+import 'dart:developer' as developer;
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:march_madness/core/models/bracket_game.dart';
@@ -45,6 +47,10 @@ class _ExpertPicksScreenState extends State<ExpertPicksScreen> {
             return const Center(child: CircularProgressIndicator());
           }
           if (snapshot.hasError) {
+            developer.log(
+              'Expert data load error: ${snapshot.error}',
+              name: 'ExpertPicksScreen',
+            );
             return Center(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -57,7 +63,7 @@ class _ExpertPicksScreenState extends State<ExpertPicksScreen> {
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    snapshot.error.toString(),
+                    'Please try again later.',
                     style: TextStyle(fontSize: 12, color: Colors.grey[500]),
                     textAlign: TextAlign.center,
                   ),
