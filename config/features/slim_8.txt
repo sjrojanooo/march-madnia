@@ -1,0 +1,8 @@
+eff_margin_diff
+team_a_adj_eff_margin
+team_a_adj_off_eff
+team_a_adj_def_eff
+team_b_tempo
+team_a_seed
+team_a_rotation_depth
+conf_win_pct_diff

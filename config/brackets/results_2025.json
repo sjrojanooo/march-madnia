@@ -1,0 +1,14 @@
+{
+  "champion": "florida",
+  "runner_up": "houston",
+  "final_four": [
+    {"team": "florida", "seed": 1},
+    {"team": "houston", "seed": 1},
+    {"team": "auburn", "seed": 1},
+    {"team": "duke", "seed": 1}
+  ],
+  "semifinals": [
+    {"winner": "florida", "loser": "auburn"},
+    {"winner": "houston", "loser": "duke"}
+  ]
+}
