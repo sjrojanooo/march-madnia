@@ -229,7 +229,7 @@ class _BracketRatingScreenState
     required ValueChanged<String?> onChanged,
   }) {
     return DropdownButtonFormField<String>(
-      initialValue: value,
+      value: value,
       decoration: InputDecoration(
         labelText: label,
         isDense: true,
@@ -248,7 +248,7 @@ class _BracketRatingScreenState
 
   Widget _agentDropdown() {
     return DropdownButtonFormField<String>(
-      initialValue: _selectedExpertId,
+      value: _selectedExpertId,
       decoration: const InputDecoration(
         labelText: 'Rating Expert',
         isDense: true,

@@ -21,7 +21,7 @@ class AppTheme {
           elevation: 0,
           centerTitle: true,
         ),
-        cardTheme: const CardThemeData(
+        cardTheme: const CardTheme(
           color: _cardDark,
           elevation: 2,
           margin: EdgeInsets.symmetric(

@@ -1,14 +1,14 @@
 services:
   web:
     build:
-      context: .
-      dockerfile: Dockerfile.flutter
+      context: ./app
+      dockerfile: ../Dockerfile.flutter
     ports:
       - "8080:8080"
       - "8181:8181"
     volumes:
       - ./app:/app
-      - ./.dart_defines:/app/.dart_defines:ro
+      - ./.dart_defines:/dart_defines:ro
       - flutter_pub_cache:/root/.pub-cache
     stdin_open: true
     tty: true
