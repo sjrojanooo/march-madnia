@@ -1,0 +1,20 @@
+# Flutter dev server — hot reload via mounted source volume
+FROM ghcr.io/cirruslabs/flutter:3.24.5
+
+WORKDIR /app
+
+# Pre-warm pub cache using pubspec files only (layer-cached)
+# Actual source is mounted at runtime via docker compose volume
+COPY app/pubspec.yaml app/pubspec.lock* ./
+RUN flutter pub get --no-version-check
+
+EXPOSE 8080
+EXPOSE 8181
+
+# Re-run pub get on start (resolves .dart_tool after volume mount),
+# then launch the web dev server with hot reload enabled
+CMD flutter pub get --no-version-check && \
+    flutter run -d web-server \
+      --web-port 8080 \
+      --web-hostname 0.0.0.0 \
+      --dart-define-from-file=.dart_defines

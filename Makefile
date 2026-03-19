@@ -105,11 +105,11 @@ seed:
 	uv run python scripts/seed_supabase.py
 
 web:
-	cd app && flutter run -d chrome --web-port 8080 --dart-define-from-file=../.dart_defines
+	docker compose --profile web up --build web
 
 dev: start seed
 
-build: setup ensure-uv ensure-flutter ensure-docker start seed web
+build: setup ensure-uv ensure-docker start seed web
 
 logs:
 	docker compose logs -f backend
@@ -126,13 +126,13 @@ help:
 	@printf "  \033[1;32mmake stop\033[0m           \033[37mStops all services (Supabase + Docker backend)\033[0m\n"
 	@printf "  \033[1;32mmake reset\033[0m          \033[37mFull teardown and fresh DB with migrations and seeds\033[0m\n"
 	@printf "  \033[1;32mmake seed\033[0m           \033[37mSeeds the DB with teams, predictions, and expert picks\033[0m\n"
-	@printf "  \033[1;32mmake web\033[0m            \033[37mLaunches the Flutter web app at http://localhost:8080\033[0m\n"
+	@printf "  \033[1;32mmake web\033[0m            \033[37mStarts Flutter dev server in Docker with hot reload at http://localhost:8080\033[0m\n"
 	@printf "  \033[1;32mmake dev\033[0m            \033[37mRuns make start + make seed (no web, no dependency checks)\033[0m\n"
 	@printf "  \033[1;32mmake backend\033[0m        \033[37mRebuilds and restarts just the FastAPI backend container\033[0m\n"
 	@printf "  \033[1;32mmake logs\033[0m           \033[37mTail FastAPI backend container logs\033[0m\n\n"
 	@printf "\033[1;33m  Dependency Checks\033[0m\n"
 	@printf "  \033[1;32mmake ensure-uv\033[0m      \033[37mInstalls uv (Python package manager) if not found\033[0m\n"
-	@printf "  \033[1;32mmake ensure-flutter\033[0m \033[37mInstalls Flutter SDK and runs flutter pub get if not found\033[0m\n"
+	@printf "  \033[1;32mmake ensure-flutter\033[0m \033[37mInstalls Flutter SDK locally (optional — build uses Docker)\033[0m\n"
 	@printf "  \033[1;32mmake ensure-docker\033[0m  \033[37mInstalls and starts Docker Desktop if not found or not running\033[0m\n\n"
 	@printf "\033[1;33m  Other\033[0m\n"
 	@printf "  \033[1;32mmake help\033[0m           \033[37mShow this help message\033[0m\n\n"
