@@ -1,4 +1,24 @@
 services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.flutter
+    ports:
+      - "8080:8080"
+      - "8181:8181"
+    volumes:
+      - ./app:/app
+      - ./.dart_defines:/app/.dart_defines:ro
+      - flutter_pub_cache:/root/.pub-cache
+    stdin_open: true
+    tty: true
+    profiles:
+      - web
+    depends_on:
+      - backend
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
   backend:
     build: .
     ports:
@@ -15,3 +35,6 @@ services:
       - ./data:/app/data:ro
     extra_hosts:
       - "host.docker.internal:host-gateway"
+
+volumes:
+  flutter_pub_cache:

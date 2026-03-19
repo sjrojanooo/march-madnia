@@ -31,7 +31,7 @@ Flutter App ──→ FastAPI (port 8000) ──→ Claude API (analyst chat)
 
 ### Prerequisites
 
-> **Docker, uv, and Flutter are handled automatically** — `make build` will install any of these that are missing.
+> **Flutter does not need to be installed locally.** It runs inside Docker as a containerized dev server with hot reload.
 
 The following must be installed before running `make build`:
 
@@ -39,6 +39,8 @@ The following must be installed before running `make build`:
 |------|---------|
 | **Python 3.11+** | [python.org](https://www.python.org/) |
 | **Node.js 18+** | [nodejs.org](https://nodejs.org/) (for Supabase CLI via npx) |
+| **Docker** | Auto-installed by `make build` if missing |
+| **uv** | Auto-installed by `make build` if missing |
 
 ### 1. Clone and configure
 
@@ -65,12 +67,11 @@ make build
 This single command:
 1. Creates `.env` and `.dart_defines` if not present
 2. Installs `uv` (Python package manager) if not present
-3. Installs Flutter SDK and runs `flutter pub get` if not present
-4. Installs and starts Docker Desktop if not present
-5. Starts Supabase (PostgreSQL + Auth + Studio) and the FastAPI backend
-6. Auto-fills `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`, and `JWT_SECRET` into `.env`
-7. Seeds the DB — 2,512 teams, 439 bracket predictions, 5 expert picks
-8. Launches the Flutter web app at **http://localhost:8080**
+3. Installs and starts Docker Desktop if not present
+4. Starts Supabase (PostgreSQL + Auth + Studio) and the FastAPI backend
+5. Auto-fills `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`, and `JWT_SECRET` into `.env`
+6. Seeds the DB — 2,512 teams, 439 bracket predictions, 5 expert picks
+7. Starts the Flutter web dev server in Docker with hot reload at **http://localhost:8080**
 
 Opens Chrome with:
 - **Bracket tab** — full ESPN-style tournament bracket with model predictions
@@ -88,7 +89,7 @@ Opens Chrome with:
 | `make stop` | Stops all services |
 | `make reset` | Tears down Docker volumes + resets DB with fresh migrations |
 | `make seed` | Seeds DB from local prediction/expert data files |
-| `make web` | Launches Flutter web app at http://localhost:8080 |
+| `make web` | Starts Flutter dev server in Docker (hot reload, foreground) |
 | `make dev` | `make start` + `make seed` (no web, no dependency checks) |
 | `make backend` | Rebuilds and restarts just the FastAPI backend container |
 | `make logs` | Tail FastAPI backend container logs |
