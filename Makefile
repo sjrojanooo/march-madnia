@@ -27,13 +27,13 @@ ensure-flutter:
 		grep -qxF 'export PATH="$$HOME/flutter/bin:$$PATH"' ~/.zshrc || echo 'export PATH="$$HOME/flutter/bin:$$PATH"' >> ~/.zshrc; \
 		export PATH="$$HOME/flutter/bin:$$PATH"; \
 		echo "Running flutter pub get..."; \
-		cd app && $$HOME/flutter/bin/flutter pub get && cd ..; \
+		cd app && yes | $$HOME/flutter/bin/flutter pub get && cd ..; \
 		echo "Flutter installed. Restart your shell or run: export PATH=\"\$$HOME/flutter/bin:\$$PATH\""; \
 	else \
 		echo "Flutter is installed."; \
 		if [ ! -d app/build ] || [ ! -f app/.dart_tool/package_config.json ]; then \
 			echo "Running flutter pub get..."; \
-			cd app && flutter pub get && cd ..; \
+			cd app && yes | flutter pub get && cd ..; \
 		fi; \
 	fi
 
