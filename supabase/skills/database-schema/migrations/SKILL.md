@@ -1,6 +1,7 @@
 ---
-description: Schema migrations — naming convention, idempotent patterns, timestamptz, reversibility
-globs: ["supabase/migrations/**/*.sql"]
+name: Database Migrations
+description: This skill should be used when the user asks to "create a new migration", "add a database table", "write a migration file", "change the schema", or "add a column to a table". It covers Supabase migration naming conventions, idempotent patterns, timestamptz usage, and safe schema evolution.
+version: 1.0.0
 ---
 
 # Migrations

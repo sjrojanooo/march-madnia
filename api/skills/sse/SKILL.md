@@ -1,5 +1,7 @@
 ---
-description: "Reference for Server-Sent Events (SSE) streaming in the March Madness backend — StreamingResponse, event protocol, CancelledError handling, error payloads"
+name: SSE Streaming
+description: "Use this skill when building SSE streaming endpoints, handling StreamingResponse, formatting event payloads, catching CancelledError on client disconnect, or adding real-time features. Trigger phrases: 'add SSE streaming', 'stream this response', 'handle client disconnect', 'SSE event format', 'streaming endpoint', 'CancelledError handling'."
+version: 1.0.0
 ---
 
 # Server-Sent Events (SSE)

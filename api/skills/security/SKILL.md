@@ -1,5 +1,7 @@
 ---
-description: "Security best practices for the March Madness FastAPI backend — reference this skill when writing, reviewing, or auditing backend code for security vulnerabilities, authentication patterns, input validation, and OWASP compliance"
+name: FastAPI Security
+description: "Use this skill when writing new API endpoints, reviewing authentication code, auditing for OWASP vulnerabilities, adding JWT validation, or hardening the FastAPI backend. Trigger phrases: 'secure this endpoint', 'add auth', 'check for vulnerabilities', 'review security', 'OWASP checklist', 'JWT validation', 'protect this route', 'audit backend security'."
+version: 1.0.0
 ---
 
 # FastAPI Security Best Practices

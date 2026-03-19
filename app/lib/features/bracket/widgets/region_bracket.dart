@@ -92,7 +92,7 @@ class RegionBracket extends StatelessWidget {
             style: const TextStyle(
               fontSize: 14,
               fontWeight: FontWeight.w800,
-              color: Color(0xFFFF6D00),
+              color: Color(0xFF333333),
               letterSpacing: 1.5,
             ),
           ),
@@ -159,7 +159,7 @@ class _RoundColumn extends StatelessWidget {
             style: TextStyle(
               fontSize: 10,
               fontWeight: FontWeight.w600,
-              color: Colors.grey[500],
+              color: Colors.grey[600],
               letterSpacing: 0.5,
             ),
           ),

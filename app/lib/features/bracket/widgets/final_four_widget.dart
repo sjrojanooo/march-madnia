@@ -33,7 +33,7 @@ class FinalFourWidget extends StatelessWidget {
             style: TextStyle(
               fontSize: 14,
               fontWeight: FontWeight.w800,
-              color: Color(0xFFFF6D00),
+              color: Color(0xFF333333),
               letterSpacing: 1.5,
             ),
           ),
@@ -50,7 +50,7 @@ class FinalFourWidget extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 10,
                     fontWeight: FontWeight.w600,
-                    color: Colors.grey[500],
+                    color: Colors.grey[600],
                   ),
                 ),
                 const SizedBox(height: 4),
@@ -74,7 +74,7 @@ class FinalFourWidget extends StatelessWidget {
                 // Trophy icon
                 const Icon(
                   Icons.emoji_events,
-                  color: Color(0xFFFFD700),
+                  color: Color(0xFFD32F2F),
                   size: 32,
                 ),
                 const SizedBox(height: 4),
@@ -83,7 +83,7 @@ class FinalFourWidget extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 11,
                     fontWeight: FontWeight.w800,
-                    color: Color(0xFFFFD700),
+                    color: Color(0xFFD32F2F),
                     letterSpacing: 1.0,
                   ),
                 ),
@@ -105,12 +105,7 @@ class FinalFourWidget extends StatelessWidget {
                         vertical: 6,
                       ),
                       decoration: BoxDecoration(
-                        gradient: const LinearGradient(
-                          colors: [
-                            Color(0xFFFF6D00),
-                            Color(0xFFFFD700),
-                          ],
-                        ),
+                        color: const Color(0xFFD32F2F),
                         borderRadius: BorderRadius.circular(16),
                       ),
                       child: Text(
@@ -118,7 +113,7 @@ class FinalFourWidget extends StatelessWidget {
                         style: const TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.w900,
-                          color: Colors.black,
+                          color: Colors.white,
                         ),
                       ),
                     ),
@@ -138,7 +133,7 @@ class FinalFourWidget extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 10,
                     fontWeight: FontWeight.w600,
-                    color: Colors.grey[500],
+                    color: Colors.grey[600],
                   ),
                 ),
                 const SizedBox(height: 4),

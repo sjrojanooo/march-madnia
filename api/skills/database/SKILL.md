@@ -1,5 +1,7 @@
 ---
-description: "Reference for Supabase database operations in the March Madness backend — query patterns, service role client, JSON fallback, user-scoped queries"
+name: Supabase Database
+description: "Use this skill when writing Supabase queries, implementing the JSON fallback pattern, scoping queries to a user, inserting or upserting rows, or accessing the service role client. Trigger phrases: 'query the database', 'add a Supabase query', 'scope this to the user', 'JSON fallback', 'upsert this row', 'check if DB is available', 'database pattern'."
+version: 1.0.0
 ---
 
 # Supabase Database Patterns

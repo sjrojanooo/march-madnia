@@ -1,6 +1,7 @@
 ---
-description: Secrets management — env vars, no secrets in migrations, key rotation, Settings class
-globs: ["**/.env*", "api/**/*.py", "supabase/functions/**/*.ts", "supabase/migrations/**/*.sql"]
+name: Secrets Management
+description: This skill should be used when the user asks to "add an API key", "configure environment variables", "set up secrets for edge functions", "rotate a compromised key", or "check what files should be gitignored". It covers .env file patterns, the pydantic Settings class, Supabase Vault, and key rotation procedures.
+version: 1.0.0
 ---
 
 # Secrets Management

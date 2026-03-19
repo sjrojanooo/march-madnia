@@ -1,5 +1,7 @@
 ---
-description: "Reference for Pydantic validation in the March Madness FastAPI backend — request/response models, field constraints, serialization patterns"
+name: Pydantic Validation
+description: "Use this skill when creating Pydantic request/response models, adding field constraints, writing validators, or defining Create/Update/Response schema patterns. Trigger phrases: 'add a Pydantic model', 'validate this request', 'add field constraints', 'create response schema', 'add a validator', 'schema for this endpoint'."
+version: 1.0.0
 ---
 
 # Pydantic Validation & Schema Patterns

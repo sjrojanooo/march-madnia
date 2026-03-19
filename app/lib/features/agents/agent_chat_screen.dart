@@ -131,7 +131,10 @@ class _AgentChatScreenState
       appBar: AppBar(
         title: Text(widget.expertName),
       ),
-      body: Column(
+      body: Center(
+        child: ConstrainedBox(
+        constraints: const BoxConstraints(maxWidth: 800),
+        child: Column(
         children: [
           Expanded(
             child: _messages.isEmpty &&
@@ -178,6 +181,8 @@ class _AgentChatScreenState
           ),
           _buildInput(),
         ],
+      ),
+      ),
       ),
     );
   }

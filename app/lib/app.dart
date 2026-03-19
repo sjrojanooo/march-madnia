@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:march_madness/core/theme/app_theme.dart';
+import 'package:march_madness/features/auth/login_screen.dart';
+import 'package:march_madness/features/auth/signup_screen.dart';
 import 'package:march_madness/features/bracket/bracket_screen.dart';
 import 'package:march_madness/features/experts/expert_picks_screen.dart';
 import 'package:march_madness/features/agents/agent_list_screen.dart';
@@ -12,8 +14,16 @@ final _shellNavKey = GlobalKey<NavigatorState>();
 
 final _router = GoRouter(
   navigatorKey: _rootNavKey,
-  initialLocation: '/bracket',
+  initialLocation: '/login',
   routes: [
+    GoRoute(
+      path: '/login',
+      builder: (context, state) => const LoginScreen(),
+    ),
+    GoRoute(
+      path: '/signup',
+      builder: (context, state) => const SignupScreen(),
+    ),
     StatefulShellRoute.indexedStack(
       builder: (context, state, navigationShell) {
         return _ShellScaffold(navigationShell: navigationShell);
@@ -84,17 +94,56 @@ class _ShellScaffold extends StatelessWidget {
 
   const _ShellScaffold({required this.navigationShell});
 
+  static const _destinations = [
+    NavigationRailDestination(
+      icon: Icon(Icons.sports_basketball),
+      label: Text('Bracket'),
+    ),
+    NavigationRailDestination(
+      icon: Icon(Icons.people),
+      label: Text('Experts'),
+    ),
+    NavigationRailDestination(
+      icon: Icon(Icons.chat),
+      label: Text('Chat'),
+    ),
+    NavigationRailDestination(
+      icon: Icon(Icons.star_rate),
+      label: Text('Rate'),
+    ),
+  ];
+
+  void _onTap(int i) => navigationShell.goBranch(
+        i,
+        initialLocation: i == navigationShell.currentIndex,
+      );
+
   @override
   Widget build(BuildContext context) {
+    final wide = MediaQuery.sizeOf(context).width >= 600;
+
+    if (wide) {
+      return Scaffold(
+        body: Row(
+          children: [
+            NavigationRail(
+              selectedIndex: navigationShell.currentIndex,
+              onDestinationSelected: _onTap,
+              labelType: NavigationRailLabelType.all,
+              destinations: _destinations,
+            ),
+            const VerticalDivider(thickness: 1, width: 1),
+            Expanded(child: navigationShell),
+          ],
+        ),
+      );
+    }
+
     return Scaffold(
       body: navigationShell,
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: navigationShell.currentIndex,
-        onTap: (i) => navigationShell.goBranch(
-          i,
-          initialLocation:
-              i == navigationShell.currentIndex,
-        ),
+        onTap: _onTap,
         type: BottomNavigationBarType.fixed,
         items: const [
           BottomNavigationBarItem(

@@ -1,6 +1,7 @@
 ---
-description: Row Level Security patterns — every table has RLS, public-read vs user-scoped tables, service_role bypass
-globs: ["supabase/migrations/**/*.sql"]
+name: RLS Policies
+description: This skill should be used when the user asks to "add RLS to a table", "create a row level security policy", "secure a table with RLS", "add a policy for user access", or "set up public read access on a table". It covers public-read vs user-scoped table patterns, service_role bypass policies, and performance-optimized auth checks.
+version: 1.0.0
 ---
 
 # RLS Policies

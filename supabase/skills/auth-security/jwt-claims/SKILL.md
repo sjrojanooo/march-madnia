@@ -1,6 +1,7 @@
 ---
-description: JWT claims — sub claim for user ID, HS256 validation, backend auth pattern
-globs: ["api/**/*.py", "**/*.dart"]
+name: JWT Claims
+description: This skill should be used when the user asks to "validate a JWT", "extract user ID from a token", "set up backend authentication", "decode a Supabase token", or "add auth to an API endpoint". It covers HS256 token validation, sub claim extraction, and the ownership-based authorization model.
+version: 1.0.0
 ---
 
 # JWT Claims
