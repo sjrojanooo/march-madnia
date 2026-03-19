@@ -70,10 +70,10 @@ ensure-docker:
 
 env-autofill:
 	@echo "Reading Supabase credentials and updating .env..."
-	@STATUS=$$(npx supabase status 2>/dev/null); \
-	ANON_KEY=$$(echo "$$STATUS" | grep 'anon key' | awk '{print $$NF}'); \
-	SERVICE_KEY=$$(echo "$$STATUS" | grep 'service_role key' | awk '{print $$NF}'); \
-	JWT=$$(echo "$$STATUS" | grep 'JWT secret' | awk '{print $$NF}'); \
+	@STATUS=$$(npx supabase status --output env 2>/dev/null); \
+	ANON_KEY=$$(echo "$$STATUS" | grep '^ANON_KEY=' | cut -d'"' -f2); \
+	SERVICE_KEY=$$(echo "$$STATUS" | grep '^SERVICE_ROLE_KEY=' | cut -d'"' -f2); \
+	JWT=$$(echo "$$STATUS" | grep '^JWT_SECRET=' | cut -d'"' -f2); \
 	sed -i '' "s|SUPABASE_URL=.*|SUPABASE_URL=http://localhost:54321|" .env; \
 	sed -i '' "s|SUPABASE_ANON_KEY=.*|SUPABASE_ANON_KEY=$$ANON_KEY|" .env; \
 	sed -i '' "s|SUPABASE_SERVICE_ROLE_KEY=.*|SUPABASE_SERVICE_ROLE_KEY=$$SERVICE_KEY|" .env; \

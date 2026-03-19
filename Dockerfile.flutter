@@ -5,16 +5,17 @@ WORKDIR /app
 
 # Pre-warm pub cache using pubspec files only (layer-cached)
 # Actual source is mounted at runtime via docker compose volume
-COPY app/pubspec.yaml app/pubspec.lock* ./
-RUN flutter pub get --no-version-check
+# Build context is ./app so paths are relative to the app directory
+COPY pubspec.yaml pubspec.lock* ./
+RUN flutter pub get
 
 EXPOSE 8080
 EXPOSE 8181
 
 # Re-run pub get on start (resolves .dart_tool after volume mount),
 # then launch the web dev server with hot reload enabled
-CMD flutter pub get --no-version-check && \
+CMD flutter pub get && \
     flutter run -d web-server \
       --web-port 8080 \
       --web-hostname 0.0.0.0 \
-      --dart-define-from-file=.dart_defines
+      --dart-define-from-file=/dart_defines

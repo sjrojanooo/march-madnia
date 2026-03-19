@@ -33,12 +33,8 @@ class ChatBubble extends StatelessWidget {
         ),
         decoration: BoxDecoration(
           color: isUser
-              ? Colors.orange.withValues(
-                  alpha: 0.2,
-                )
-              : Colors.grey.withValues(
-                  alpha: 0.15,
-                ),
+              ? Colors.orange.withOpacity(0.2)
+              : Colors.grey.withOpacity(0.15),
           borderRadius: BorderRadius.only(
             topLeft: const Radius.circular(12),
             topRight: const Radius.circular(12),
