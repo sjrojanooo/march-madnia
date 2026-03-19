@@ -70,9 +70,10 @@ ensure-docker:
 
 env-autofill:
 	@echo "Reading Supabase credentials and updating .env..."
-	@ANON_KEY=$$(npx supabase status 2>/dev/null | grep 'anon key' | awk '{print $$NF}'); \
-	SERVICE_KEY=$$(npx supabase status 2>/dev/null | grep 'service_role key' | awk '{print $$NF}'); \
-	JWT=$$(npx supabase status 2>/dev/null | grep 'JWT secret' | awk '{print $$NF}'); \
+	@STATUS=$$(npx supabase status 2>/dev/null); \
+	ANON_KEY=$$(echo "$$STATUS" | grep 'anon key' | awk '{print $$NF}'); \
+	SERVICE_KEY=$$(echo "$$STATUS" | grep 'service_role key' | awk '{print $$NF}'); \
+	JWT=$$(echo "$$STATUS" | grep 'JWT secret' | awk '{print $$NF}'); \
 	sed -i '' "s|SUPABASE_URL=.*|SUPABASE_URL=http://localhost:54321|" .env; \
 	sed -i '' "s|SUPABASE_ANON_KEY=.*|SUPABASE_ANON_KEY=$$ANON_KEY|" .env; \
 	sed -i '' "s|SUPABASE_SERVICE_ROLE_KEY=.*|SUPABASE_SERVICE_ROLE_KEY=$$SERVICE_KEY|" .env; \
@@ -95,8 +96,6 @@ stop:
 
 reset:
 	docker compose down -v
-	npx supabase stop
-	npx supabase start
 	npx supabase db reset
 
 backend:
@@ -135,3 +134,5 @@ help:
 	@printf "  \033[1;32mmake ensure-uv\033[0m      \033[37mInstalls uv (Python package manager) if not found\033[0m\n"
 	@printf "  \033[1;32mmake ensure-flutter\033[0m \033[37mInstalls Flutter SDK and runs flutter pub get if not found\033[0m\n"
 	@printf "  \033[1;32mmake ensure-docker\033[0m  \033[37mInstalls and starts Docker Desktop if not found or not running\033[0m\n\n"
+	@printf "\033[1;33m  Other\033[0m\n"
+	@printf "  \033[1;32mmake help\033[0m           \033[37mShow this help message\033[0m\n\n"

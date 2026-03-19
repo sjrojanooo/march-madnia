@@ -40,28 +40,23 @@ The following must be installed before running `make build`:
 | **Python 3.11+** | [python.org](https://www.python.org/) |
 | **Node.js 18+** | [nodejs.org](https://nodejs.org/) (for Supabase CLI via npx) |
 
-### 1. Clone and setup
+### 1. Clone and configure
 
 ```bash
 git clone https://github.com/sjrojanooo/march-madnia.git
 cd march-madnia
-
-# Create .env and .dart_defines from examples
 make setup
 ```
 
-### 2. Configure environment
-
-Edit `.env` and add your Anthropic API key (the only value you need to provide):
+Edit `.env` and set your Anthropic API key — the only value you need to provide:
 
 ```bash
-# Required for AI chat — get yours at https://console.anthropic.com/
 ANTHROPIC_API_KEY=sk-ant-your-key-here
 ```
 
-All other values (`SUPABASE_URL`, `SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`, `JWT_SECRET`) are auto-filled by `make build` once Supabase starts locally.
+All Supabase values are auto-filled when `make build` starts the local DB.
 
-### 3. Build and run
+### 2. Build and run
 
 ```bash
 make build
@@ -87,16 +82,17 @@ Opens Chrome with:
 
 | Command | What it does |
 |---------|-------------|
-| `make build` | Full one-command setup: Docker check → start → seed → web app |
+| `make build` | Full one-command setup: installs deps → starts services → seeds DB → launches app |
 | `make setup` | Creates `.env` and `.dart_defines` from examples |
-| `make start` | Starts Supabase + FastAPI backend |
-| `make stop` | Stops everything |
-| `make reset` | Full teardown + fresh DB with migrations and seeds |
+| `make start` | Starts Supabase + FastAPI backend (Docker must be running) |
+| `make stop` | Stops all services |
+| `make reset` | Tears down Docker volumes + resets DB with fresh migrations |
 | `make seed` | Seeds DB from local prediction/expert data files |
-| `make web` | Launches Flutter web app on port 8080 |
-| `make dev` | `make start` + `make seed` (no web, no Docker check) |
-| `make backend` | Rebuilds and restarts just the backend container |
-| `make logs` | Tail backend container logs |
+| `make web` | Launches Flutter web app at http://localhost:8080 |
+| `make dev` | `make start` + `make seed` (no web, no dependency checks) |
+| `make backend` | Rebuilds and restarts just the FastAPI backend container |
+| `make logs` | Tail FastAPI backend container logs |
+| `make help` | Show all available commands |
 
 ## Services & Ports
 
@@ -115,16 +111,16 @@ The prediction model is an ensemble (XGBoost + LightGBM + Logistic Regression) t
 
 ```bash
 # Scrape current season data from Sports Reference
-uv run python -m src.scraping.sports_ref
+uv run python scripts/scrape_season.py --season 2026
 
 # Build features
 uv run python -m src.pipeline --stage features
 
 # Train model
-uv run python scripts/train_with2025.py
+uv run python scripts/train.py
 
 # Generate bracket predictions (Monte Carlo simulation)
-uv run python scripts/predict_bracket.py
+uv run python scripts/predict.py --season 2026
 ```
 
 ### Model Performance
