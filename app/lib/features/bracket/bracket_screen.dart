@@ -133,7 +133,9 @@ class _BracketLayout extends StatelessWidget {
     final southGames = data.regionGames['South'] ?? {};
     final midwestGames = data.regionGames['Midwest'] ?? {};
 
-    return InteractiveViewer(
+    return Container(
+      color: const Color(0xFFF5F5F5),
+      child: InteractiveViewer(
       constrained: false,
       boundaryMargin: const EdgeInsets.all(100),
       minScale: 0.15,
@@ -178,7 +180,7 @@ class _BracketLayout extends StatelessWidget {
             Container(
               width: 800,
               height: 1,
-              color: Colors.grey[800],
+              color: const Color(0xFFD0D0D0),
             ),
             const SizedBox(height: 48),
             // Bottom row: South | (spacer) | Midwest
@@ -206,6 +208,7 @@ class _BracketLayout extends StatelessWidget {
           ],
         ),
       ),
+    ),
     );
   }
 }

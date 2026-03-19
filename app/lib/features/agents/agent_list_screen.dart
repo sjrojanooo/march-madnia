@@ -74,7 +74,10 @@ class _AgentListScreenState
             );
           }
 
-          return ListView.builder(
+          return Center(
+           child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 700),
+            child: ListView.builder(
             padding: const EdgeInsets.all(12),
             itemCount: agents.length,
             itemBuilder: (context, index) {
@@ -136,6 +139,8 @@ class _AgentListScreenState
                 ),
               );
             },
+          ),
+          ),
           );
         },
       ),

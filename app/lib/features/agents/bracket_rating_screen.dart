@@ -130,7 +130,10 @@ class _BracketRatingScreenState
       appBar: AppBar(
         title: const Text('Rate My Bracket'),
       ),
-      body: SingleChildScrollView(
+      body: Center(
+        child: ConstrainedBox(
+        constraints: const BoxConstraints(maxWidth: 600),
+        child: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment:
@@ -142,6 +145,8 @@ class _BracketRatingScreenState
               _buildRatingSection(),
           ],
         ),
+      ),
+      ),
       ),
     );
   }

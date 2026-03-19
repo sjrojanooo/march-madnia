@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:march_madness/core/models/bracket_game.dart';
 
-/// A single matchup card showing two teams, seeds, and win probabilities.
-/// Styled like an ESPN bracket matchup cell.
+/// ESPN Tournament Challenge style matchup card.
+/// White card with two team rows, seed badges, and win probability.
 class MatchupCard extends StatelessWidget {
   final BracketGame game;
   final VoidCallback? onTap;
@@ -17,21 +17,21 @@ class MatchupCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final borderColor = game.isUpset
-        ? const Color(0xFFFF6D00) // orange for upsets
-        : Colors.grey[700]!;
-
     return GestureDetector(
       onTap: onTap,
       child: Container(
         width: width,
         decoration: BoxDecoration(
-          color: const Color(0xFF1A1A2E),
-          borderRadius: BorderRadius.circular(4),
-          border: Border.all(
-            color: borderColor,
-            width: game.isUpset ? 1.5 : 0.5,
-          ),
+          color: Colors.white,
+          border: Border.all(color: const Color(0xFFD0D0D0), width: 1),
+          borderRadius: BorderRadius.circular(2),
+          boxShadow: const [
+            BoxShadow(
+              color: Color(0x0D000000),
+              blurRadius: 2,
+              offset: Offset(0, 1),
+            ),
+          ],
         ),
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -41,18 +41,13 @@ class MatchupCard extends StatelessWidget {
               seed: game.seed1,
               probability: game.team1Probability,
               isWinner: game.team1Wins,
-              isTop: true,
             ),
-            Container(
-              height: 0.5,
-              color: Colors.grey[700],
-            ),
+            Container(height: 1, color: const Color(0xFFE0E0E0)),
             _TeamRow(
               team: game.team2,
               seed: game.seed2,
               probability: game.team2Probability,
               isWinner: game.team2Wins,
-              isTop: false,
             ),
           ],
         ),
@@ -66,59 +61,39 @@ class _TeamRow extends StatelessWidget {
   final int? seed;
   final double? probability;
   final bool isWinner;
-  final bool isTop;
 
   const _TeamRow({
     required this.team,
     required this.seed,
     required this.probability,
     required this.isWinner,
-    required this.isTop,
   });
-
-  Color _probColor(double prob) {
-    if (prob >= 0.75) return const Color(0xFF4CAF50);
-    if (prob >= 0.50) return const Color(0xFFFFC107);
-    return const Color(0xFFFF5722);
-  }
 
   @override
   Widget build(BuildContext context) {
     final displayTeam = BracketGame.displayName(team);
-    final prob = probability;
+    final isTbd = team == null || team!.isEmpty;
 
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
+      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 5),
       decoration: BoxDecoration(
-        color: isWinner
-            ? const Color(0xFF1B3A26) // dark green highlight for winner
-            : Colors.transparent,
-        borderRadius: BorderRadius.only(
-          topLeft: isTop ? const Radius.circular(3) : Radius.zero,
-          topRight: isTop ? const Radius.circular(3) : Radius.zero,
-          bottomLeft: !isTop ? const Radius.circular(3) : Radius.zero,
-          bottomRight: !isTop ? const Radius.circular(3) : Radius.zero,
-        ),
+        color: isWinner ? const Color(0xFFFFFDE7) : Colors.white,
       ),
       child: Row(
         children: [
           // Seed badge
           if (seed != null)
             Container(
-              width: 20,
+              width: 18,
               height: 18,
               alignment: Alignment.center,
-              margin: const EdgeInsets.only(right: 4),
-              decoration: BoxDecoration(
-                color: Colors.grey[800],
-                borderRadius: BorderRadius.circular(2),
-              ),
+              margin: const EdgeInsets.only(right: 6),
               child: Text(
                 '$seed',
                 style: TextStyle(
-                  fontSize: 10,
+                  fontSize: 11,
                   fontWeight: FontWeight.w600,
-                  color: isWinner ? Colors.white : Colors.grey[400],
+                  color: Colors.grey[600],
                 ),
               ),
             ),
@@ -127,22 +102,31 @@ class _TeamRow extends StatelessWidget {
             child: Text(
               displayTeam,
               style: TextStyle(
-                fontSize: 11,
-                fontWeight: isWinner ? FontWeight.w700 : FontWeight.w400,
-                color: isWinner ? Colors.white : Colors.grey[500],
+                fontSize: 12,
+                fontWeight: isWinner ? FontWeight.w800 : FontWeight.w500,
+                color: isTbd
+                    ? Colors.grey[400]
+                    : isWinner
+                        ? Colors.black
+                        : const Color(0xFF333333),
               ),
               overflow: TextOverflow.ellipsis,
               maxLines: 1,
             ),
           ),
           // Win probability
-          if (prob != null)
-            Text(
-              '${(prob * 100).toStringAsFixed(0)}%',
-              style: TextStyle(
-                fontSize: 10,
-                fontWeight: FontWeight.w600,
-                color: isWinner ? _probColor(prob) : Colors.grey[600],
+          if (probability != null)
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1),
+              child: Text(
+                '${(probability! * 100).toStringAsFixed(0)}%',
+                style: TextStyle(
+                  fontSize: 10,
+                  fontWeight: FontWeight.w600,
+                  color: isWinner
+                      ? const Color(0xFF2E7D32)
+                      : Colors.grey[500],
+                ),
               ),
             ),
         ],

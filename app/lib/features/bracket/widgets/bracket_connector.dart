@@ -19,7 +19,7 @@ class BracketConnectorPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
-      ..color = Colors.grey[600]!
+      ..color = const Color(0xFFBDBDBD)
       ..strokeWidth = 1.0
       ..style = PaintingStyle.stroke;
 
