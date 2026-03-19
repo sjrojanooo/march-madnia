@@ -8,7 +8,6 @@ __pycache__/
 *.py[cod]
 .venv/
 *.egg-info/
-uv.lock
 
 # Data (large files — keep predictions and models only)
 data/raw/

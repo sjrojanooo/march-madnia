@@ -31,12 +31,13 @@ Flutter App ──→ FastAPI (port 8000) ──→ Claude API (analyst chat)
 
 ### Prerequisites
 
+> **Docker, uv, and Flutter are handled automatically** — `make build` will install any of these that are missing.
+
+The following must be installed before running `make build`:
+
 | Tool | Install |
 |------|---------|
 | **Python 3.11+** | [python.org](https://www.python.org/) |
-| **uv** | `curl -LsSf https://astral.sh/uv/install.sh \| sh` |
-| **Flutter 3.10+** | [flutter.dev/docs/get-started](https://flutter.dev/docs/get-started/install) |
-| **Docker** | [docker.com](https://www.docker.com/get-started/) |
 | **Node.js 18+** | [nodejs.org](https://nodejs.org/) (for Supabase CLI via npx) |
 
 ### 1. Clone and setup
@@ -45,88 +46,55 @@ Flutter App ──→ FastAPI (port 8000) ──→ Claude API (analyst chat)
 git clone https://github.com/sjrojanooo/march-madnia.git
 cd march-madnia
 
-# Install Python dependencies
-uv sync
-
-# Install Flutter dependencies
-cd app && flutter pub get && cd ..
-
-# Create config files from examples
+# Create .env and .dart_defines from examples
 make setup
 ```
 
 ### 2. Configure environment
 
-Edit `.env` with your keys:
+Edit `.env` and add your Anthropic API key (the only value you need to provide):
 
 ```bash
-# Required for AI chat (get from https://console.anthropic.com/)
+# Required for AI chat — get yours at https://console.anthropic.com/
 ANTHROPIC_API_KEY=sk-ant-your-key-here
-
-# These are auto-filled when Supabase starts (step 3)
-SUPABASE_URL=http://127.0.0.1:54321
-SUPABASE_ANON_KEY=
-SUPABASE_SERVICE_ROLE_KEY=
-JWT_SECRET=
 ```
 
-### 3. Start everything
+All other values (`SUPABASE_URL`, `SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`, `JWT_SECRET`) are auto-filled by `make build` once Supabase starts locally.
+
+### 3. Build and run
 
 ```bash
-# Start Supabase (PostgreSQL + Auth + Studio) and the FastAPI backend
-make start
+make build
 ```
 
-This will:
-- Pull Docker images for Supabase services (first run takes a few minutes)
-- Apply all database migrations (8 tables including teams, predictions, expert picks)
-- Run SQL seeds
-- Build and start the FastAPI backend container
+This single command:
+1. Creates `.env` and `.dart_defines` if not present
+2. Installs `uv` (Python package manager) if not present
+3. Installs Flutter SDK and runs `flutter pub get` if not present
+4. Installs and starts Docker Desktop if not present
+5. Starts Supabase (PostgreSQL + Auth + Studio) and the FastAPI backend
+6. Auto-fills `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`, and `JWT_SECRET` into `.env`
+7. Seeds the DB — 2,512 teams, 439 bracket predictions, 5 expert picks
+8. Launches the Flutter web app at **http://localhost:8080**
 
-After it completes, grab the Supabase keys from the output and paste them into `.env`:
-```bash
-# Get the keys
-npx supabase status
-```
-
-### 4. Seed the database
-
-```bash
-make seed
-```
-
-Loads 2,512 teams, 439 bracket predictions, and 5 expert picks into PostgreSQL.
-
-### 5. Launch the web app
-
-```bash
-make web
-```
-
-Opens Chrome at **http://localhost:8080** with:
+Opens Chrome with:
 - **Bracket tab** — full ESPN-style tournament bracket with model predictions
 - **Experts tab** — dropdown to view each expert's bracket picks
 - **Chat tab** — AI analyst agents (requires `ANTHROPIC_API_KEY`)
 - **Rate tab** — get your bracket rated by AI experts
 
-### All-in-one
-
-```bash
-make dev   # runs: make start && make seed
-make web   # in a separate terminal
-```
-
 ## Makefile Commands
 
 | Command | What it does |
 |---------|-------------|
+| `make build` | Full one-command setup: Docker check → start → seed → web app |
 | `make setup` | Creates `.env` and `.dart_defines` from examples |
 | `make start` | Starts Supabase + FastAPI backend |
 | `make stop` | Stops everything |
 | `make reset` | Full teardown + fresh DB with migrations and seeds |
 | `make seed` | Seeds DB from local prediction/expert data files |
 | `make web` | Launches Flutter web app on port 8080 |
-| `make dev` | `make start` + `make seed` |
+| `make dev` | `make start` + `make seed` (no web, no Docker check) |
 | `make backend` | Rebuilds and restarts just the backend container |
 | `make logs` | Tail backend container logs |
 
